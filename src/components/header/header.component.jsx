@@ -1,5 +1,5 @@
 import { Fragment, useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import MobileLogo from "../../assets/logo-mobile.png";
 import Hamburger from "../../assets/icons/bars-solid.svg";
@@ -9,6 +9,16 @@ import InstagramSVG from "../../assets/icons/instagram.svg";
 import "./header.styles.scss";
 
 const Header = () => {
+	const location = useLocation();
+
+	const getLink = (path) => {
+		return location.pathname === path ? "active-link" : "";
+	};
+
+	const scrollToBottom = () => {
+		window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+	};
+
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	useEffect(() => {
@@ -78,13 +88,19 @@ const Header = () => {
 						<nav>
 							<ul className="chalet">
 								<li>
-									<Link to="/projects">Projects</Link>
+									<Link to="/projects" className={getLink("/projects")}>
+										Projects
+									</Link>
 								</li>
 								<li>
-									<Link to="/about">About</Link>
+									<Link to="/about" className={getLink("/about")}>
+										About
+									</Link>
 								</li>
 								<li>
-									<a href="#contact">Contact</a>
+									<a href="javascript:;" onClick={scrollToBottom}>
+										Contact
+									</a>
 								</li>
 							</ul>
 						</nav>

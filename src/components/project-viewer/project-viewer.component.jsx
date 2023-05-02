@@ -154,7 +154,10 @@ const ProjectViewer = () => {
 		<div className="project-viewer-container">
 			<div className="project">
 				<div className="carousel">
-					<div className="featured">
+					<div
+						className="featured"
+						style={{ width: images.length === 1 ? "100%" : "auto" }}
+					>
 						<div
 							className="arrow-container arrow-container-left"
 							onClick={handlePrevImage}
@@ -169,7 +172,10 @@ const ProjectViewer = () => {
 							<img src={AngleRight} alt="carousel-right-arrow" />
 						</div>
 					</div>
-					<div className="collection-container">
+					<div
+						className="collection-container"
+						style={{ display: images.length === 1 ? "none" : "flex" }}
+					>
 						<div
 							className="angle-container angle-container-top"
 							onClick={handleUp}

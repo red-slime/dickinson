@@ -75,16 +75,11 @@ const Projects = () => {
 				<section className="intro">
 					<div className="text">
 						<p>
-							Lorem Ipsum is simply dummy text of the printing and typesetting
-							industry. Lorem Ipsum has been the industry's standard dummy text
-							ever since the 1500s, when an unknown printer took a galley of
-							type and scrambled it to make a type specimen book. It has
-							survived not only five centuries, but also the leap into
-							electronic typesetting, remaining essentially unchanged. It was
-							popularised in the 1960s with the release of Letraset sheets
-							containing Lorem Ipsum passages, and more recently with desktop
-							publishing software like Aldus PageMaker including versions of
-							Lorem Ipsum.
+							General Project Landing Page: Intro In our 40 years of designing
+							environments with superior spaces, Dickinson Architects has become
+							a trusted partner in projects of all sizes and scopes. We inspire
+							confidence from our clients because we believe every space should
+							first and foremost serve those who occupy it.
 						</p>
 					</div>
 					<div className="better">
@@ -108,10 +103,10 @@ const Projects = () => {
 						<div className="bar"></div>
 					</div>
 					<div className="toggle-bar">
-						<div className="toggle">
+						{/* <div className="toggle">
 							<img src={FilterIcon} alt="filter-icon" />
 							<span>Filter</span>
-						</div>
+						</div> */}
 						<ul>
 							<li
 								className={toggled.Commercial ? "active" : ""}
@@ -161,6 +156,10 @@ const Projects = () => {
 						{Paths &&
 							Paths.map((category) => {
 								return Object.entries(category).map(([key, items]) => {
+									items.sort(
+										(a, b) =>
+											new Date(b.completionDate) - new Date(a.completionDate)
+									);
 									return items.map((item) => {
 										const imageSrc = imageContexts[key](
 											"./" + item.featuredImg

@@ -248,16 +248,13 @@ const About = () => {
 				<section className="intro">
 					<div className="text">
 						<p>
-							Lorem Ipsum is simply dummy text of the printing and typesetting
-							industry. Lorem Ipsum has been the industry's standard dummy text
-							ever since the 1500s, when an unknown printer took a galley of
-							type and scrambled it to make a type specimen book. It has
-							survived not only five centuries, but also the leap into
-							electronic typesetting, remaining essentially unchanged. It was
-							popularised in the 1960s with the release of Letraset sheets
-							containing Lorem Ipsum passages, and more recently with desktop
-							publishing software like Aldus PageMaker including versions of
-							Lorem Ipsum.
+							The Dickinson Architects team believes every space should serve
+							those who occupy it. The key to our intentionality is
+							comprehension. We uphold the culture we've built by aiming to
+							always meet the standards you see listed below. Our expertise is
+							rooted in the dedication we show to detail, the respect and
+							loyalty we have for each other and our clients, and the joy we
+							receive from sharing our legacy with the community.
 						</p>
 					</div>
 					<div className="video">
@@ -317,7 +314,10 @@ const About = () => {
 									<h3>{name}</h3>
 									<span>{position}</span>
 								</div>
-								<div className="mobileBio">{bio}</div>
+								<div className="mobileBio">
+									{bio}
+									<div className="abar"></div>
+								</div>
 							</div>
 						))}
 					</div>

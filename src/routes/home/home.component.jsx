@@ -1,4 +1,5 @@
 import "./home.styles.scss";
+
 import { Link } from "react-router-dom";
 import FeaturedList from "../../components/featured-list/featured-list.component";
 

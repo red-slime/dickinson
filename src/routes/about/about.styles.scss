@@ -310,7 +310,7 @@ $thirds-pos: translateX(calc(-200% - 80px));
 						.close-bio:hover {
 							transform: rotate(90deg);
 							transition: 0.3s ease-in-out;
-							background: $yellow;
+							//background: $yellow;
 						}
 
 						.build {
@@ -333,12 +333,24 @@ $thirds-pos: translateX(calc(-200% - 80px));
 						overflow: hidden;
 						transition: max-height 0.3s ease-in-out;
 
+						@media (max-width: 428px) {
+							background: $white;
+							border-radius: 0;
+						}
+
 						.bio-break {
 							margin-top: 10px;
 						}
 
-						.bio-break:last-child {
-							margin-bottom: 10px;
+						// .bio-break:last-child {
+						// 	margin-bottom: 20px;
+						// }
+
+						.abar {
+							margin-top: 20px;
+							height: 1px;
+							width: 100%;
+							background: $coal;
 						}
 					}
 
@@ -405,6 +417,10 @@ $thirds-pos: translateX(calc(-200% - 80px));
 						background: $yellow;
 						z-index: -1;
 						border-radius: $br;
+
+						@media (max-width: 428px) {
+							background: $white;
+						}
 					}
 				}
 
@@ -439,6 +455,10 @@ $thirds-pos: translateX(calc(-200% - 80px));
 						// transform: none;
 						// animation: none;
 						// transition: none;
+					}
+
+					@media (max-width: 428px) {
+						background: $white;
 					}
 				}
 
