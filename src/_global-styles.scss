@@ -1,0 +1,108 @@
+// Global Styles
+
+// Colors
+$yellow: #ead518;
+$black: #000;
+$coal: #312f30;
+$light: #f0f0f0;
+$white: #fff;
+$clear: transparent;
+
+// Max-width
+$mw: 1460px;
+
+// Margins
+$m-center: 0 auto;
+$spacer: 40px;
+
+// Paddings
+$pad: 30px 20px;
+$pad-tb: 30px;
+$pad-lr: 20px;
+$reverse-pad: 20px 30px;
+
+// Border radius'
+$br: 15px;
+
+// Font sizes
+
+$h-big: 60px;
+$h-mb: 50px;
+$h-med: 40px;
+$h-ms: 30px;
+$h-small: 20px;
+
+$p1: 20px;
+$p2: 18px;
+$p3: 16px;
+$p4: 14px;
+$p5: 12px;
+
+$a-small: 14px;
+
+// Fonts
+@font-face {
+	font-family: "Chalet";
+	src: url("./assets/Chalet-LondonNineteenSixty.woff") format("woff");
+}
+
+.chalet {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+@font-face {
+	font-family: "Gotham";
+	src: url("./assets/GothamPro.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Bodoni";
+	src: url("./assets/BodoniPoster.woff") format("woff");
+}
+
+// Headings
+
+h1,
+h2,
+h3 {
+	font-family: "Gotham";
+	font-weight: bold;
+	letter-spacing: -1px;
+	line-height: 1.2;
+}
+
+p,
+span {
+	font-family: "Chalet";
+	line-height: 1.8;
+}
+
+button {
+	border: none;
+	border-radius: 10px;
+	border: 2px solid $black;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	font-family: "Chalet";
+	letter-spacing: 2px;
+	cursor: pointer;
+}
+
+.bar {
+	transform: translateY(2px);
+}
+
+/*
+1460
+1160
+1060
+960
+850
+768
+710
+640
+572
+428
+320
+*/

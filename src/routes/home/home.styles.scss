@@ -1,0 +1,330 @@
+@import "../../global-styles";
+
+.home-component-container {
+	display: flex;
+	justify-content: center;
+	overflow-x: hidden;
+
+	.home {
+		width: $mw;
+		max-width: $mw;
+		padding: $pad;
+
+		@media (max-width: 428px) {
+			padding: 0;
+		}
+
+		.home-one {
+			background-image: url("../../projects/HOSPITALITY/Sage Valley Locker Room/Sage-Valley-Lockers (9).jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: 0 50%;
+			height: 600px;
+			border-radius: $br;
+			overflow: hidden;
+			margin-bottom: $spacer;
+
+			@media (max-width: 640px) {
+				height: 500px;
+			}
+
+			@media (max-width: 428px) {
+				background-image: none;
+				border-radius: 0;
+				height: auto;
+			}
+
+			.mobile-splash {
+				display: none;
+				background-image: url("../../projects/HOSPITALITY/Sage Valley Locker Room/Sage-Valley-Lockers (9).jpg");
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: 0 50%;
+				width: 100%;
+				height: 300px;
+
+				@media (max-width: 428px) {
+					display: block;
+				}
+			}
+
+			.splash {
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 50%;
+				height: 100%;
+				background: $clear;
+				// border-radius: 0 50% 0 0;
+				// overflow: hidden;
+				/*border-radius: 0 60% 25% 0;*/
+				/*clip-path: ellipse(100% at 5% 90%);
+	        clip-path: ellipse(100% 200% at 0% 100%);*/
+
+				@media (max-width: 980px) {
+					width: 70%;
+				}
+
+				@media (max-width: 572px) {
+					width: 80%;
+				}
+
+				@media (max-width: 510px) {
+					width: 90%;
+				}
+
+				@media (max-width: 460px) {
+					width: 100%;
+				}
+
+				@media (max-width: 428px) {
+					width: 100%;
+					height: 420px;
+					background: $yellow;
+					padding: 20px 30px;
+				}
+
+				@media (max-width: 400px) {
+					height: 380px;
+				}
+
+				div {
+					position: relative;
+					z-index: 1;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-around;
+					height: 80%;
+					width: 80%;
+
+					@media (max-width: 1160px) {
+						height: 70%;
+					}
+
+					@media (max-width: 768px) {
+						height: 65%;
+					}
+
+					@media (max-width: 640px) {
+						height: 70%;
+					}
+
+					@media (max-width: 428px) {
+						height: 100%;
+						width: 100%;
+					}
+
+					.philosophy-mobile {
+						display: none;
+						@media (max-width: 428px) {
+							display: inline;
+						}
+					}
+
+					.philosophy {
+						display: inline;
+						@media (max-width: 428px) {
+							display: none;
+						}
+					}
+
+					h1 {
+						font-size: $h-big;
+
+						@media (max-width: 1160px) {
+							font-size: 46px;
+						}
+
+						@media (max-width: 980px) {
+							font-size: 46px;
+						}
+
+						@media (max-width: 768px) {
+							font-size: 42px;
+						}
+
+						@media (max-width: 710px) {
+							font-size: 38px;
+						}
+
+						@media (max-width: 640px) {
+							font-size: 32px;
+						}
+
+						@media (max-width: 428px) {
+							font-size: 38px;
+						}
+
+						@media (max-width: 344px) {
+							font-size: 34px;
+						}
+					}
+
+					p {
+						font-size: 24px;
+
+						@media (max-width: 1160px) {
+							font-size: 20px;
+						}
+
+						@media (max-width: 980px) {
+							font-size: 20px;
+						}
+
+						@media (max-width: 710px) {
+							font-size: 18px;
+						}
+
+						@media (max-width: 640px) {
+							font-size: 16px;
+						}
+
+						@media (max-width: 428px) {
+							font-size: 24px;
+						}
+
+						@media (max-width: 400px) {
+							font-size: 20px;
+						}
+
+						@media (max-width: 344px) {
+							font-size: 18px;
+						}
+					}
+
+					div {
+						display: flex;
+						flex-direction: row;
+						justify-content: flex-start;
+						height: auto;
+						width: 100%;
+
+						@media (max-width: 980px) {
+							flex-direction: column;
+							width: 60%;
+						}
+
+						@media (max-width: 768px) {
+							width: 80%;
+						}
+
+						a:nth-of-type(1) {
+							margin-right: 30px;
+
+							@media (max-width: 980px) {
+								margin-right: 0;
+								margin-bottom: 10px;
+							}
+						}
+
+						a button {
+							@media (max-width: 980px) {
+								width: 100%;
+							}
+
+							@media (max-width: 428px) {
+								width: auto;
+							}
+						}
+
+						a:nth-of-type(1) button {
+							background: $black;
+							color: $yellow;
+						}
+
+						a:nth-of-type(2) button {
+							background: $clear;
+							color: $black;
+
+							@media (max-width: 428px) {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+
+			.splash::before {
+				content: "";
+				position: absolute;
+				width: 200%;
+				height: 200%;
+				transform: translateX(-25%);
+				background: $yellow;
+				z-index: 0;
+				-webkit-animation: move 25s infinite alternate;
+				animation: move 15s infinite alternate;
+				transition: 1s cubic-bezier(0.07, 0.8, 0.16, 1);
+
+				@media (max-width: 428px) {
+					display: none;
+				}
+			}
+
+			.splash:hover::before {
+				transform: scale(60%);
+			}
+
+			@-webkit-keyframes move {
+				from {
+					border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+				}
+
+				to {
+					border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+				}
+			}
+
+			@keyframes move {
+				from {
+					border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+				}
+
+				to {
+					border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+				}
+			}
+		}
+
+		.home-two {
+			@media (max-width: 428px) {
+				padding: $pad;
+			}
+			.section-title {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				margin-bottom: $spacer;
+
+				h1 {
+					flex-grow: 1;
+					flex-shrink: 0;
+					color: $black;
+					font-size: $h-med;
+
+					@media (max-width: 640px) {
+						font-size: 32px;
+					}
+
+					@media (max-width: 428px) {
+						font-size: 26px;
+					}
+				}
+
+				.bar {
+					flex-grow: 0;
+					flex-shrink: 1;
+					height: 2px;
+					width: 100%;
+					background: $black;
+					margin-left: $spacer;
+
+					@media (max-width: 640px) {
+						margin-left: calc($spacer / 2);
+					}
+				}
+			}
+		}
+	}
+}

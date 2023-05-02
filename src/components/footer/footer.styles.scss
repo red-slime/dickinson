@@ -1,0 +1,99 @@
+@import "../../global-styles";
+
+.footer-container {
+	width: 100%;
+	background: $clear;
+	display: flex;
+	justify-content: center;
+
+	.footer {
+		width: $mw;
+		max-width: $mw;
+		display: flex;
+		flex-direction: column;
+		padding: $pad;
+
+		.bar {
+			height: 2px;
+			width: 100%;
+			background: $black;
+			margin-bottom: $spacer;
+
+			@media (max-width: 630px) {
+				margin-bottom: 30px;
+			}
+		}
+
+		a,
+		a:visited,
+		a:active {
+			text-decoration: none;
+			color: $black;
+			display: block;
+			font-family: "Chalet";
+			letter-spacing: 2px;
+			font-size: $a-small;
+			line-height: 1.5;
+		}
+
+		.information-container {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			width: 100%;
+
+			.lc-con {
+				display: flex;
+				justify-content: space-between;
+				flex-grow: 1;
+				flex-shrink: 0;
+				width: 50%;
+
+				.location,
+				.contact {
+					flex-grow: 1;
+					flex-shrink: 0;
+					margin-right: $spacer;
+				}
+			}
+
+			.socials {
+				display: flex;
+				justify-content: flex-end;
+				width: 50%;
+				flex-grow: 0;
+				flex-shrink: 1;
+
+				a {
+					line-height: 0;
+					margin-left: 10px;
+				}
+
+				img {
+					height: 20px;
+				}
+			}
+
+			@media (max-width: 630px) {
+				flex-direction: column;
+				align-items: flex-start;
+
+				.lc-con {
+					flex-direction: column;
+					gap: 20px;
+					width: 100%;
+				}
+
+				.socials {
+					justify-content: flex-start;
+					margin-top: 25px;
+
+					a {
+						margin-left: 0;
+						margin-right: 20px;
+					}
+				}
+			}
+		}
+	}
+}
