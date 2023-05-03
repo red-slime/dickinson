@@ -363,3 +363,65 @@
 		}
 	}
 }
+
+.fade-in-left {
+	animation: fadeInLeft 0.3s ease-in-out;
+}
+
+@keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(30px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.fade-out-left {
+	animation: fadeOutLeft 0.3s ease-in-out;
+}
+
+@keyframes fadeOutLeft {
+	0% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	100% {
+		opacity: 0;
+		transform: translateX(-30px);
+	}
+}
+
+/**/
+
+.fade-in-right {
+	animation: fadeInRight 0.3s ease-in-out;
+}
+
+@keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		transform: translateX(-30px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.fade-out-right {
+	animation: fadeOutRight 0.3s ease-in-out;
+}
+
+@keyframes fadeOutRight {
+	0% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	100% {
+		opacity: 0;
+		transform: translateX(30px);
+	}
+}

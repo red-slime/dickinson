@@ -50,6 +50,12 @@ const imageContexts = {
 
 const Projects = () => {
 	useScrollPosition("projects_page");
+
+	const [displayedProjectsCount, setDisplayedProjectsCount] = useState(11);
+	const loadMoreProjects = () => {
+		setDisplayedProjectsCount(displayedProjectsCount + 12);
+	};
+
 	const [projectsClass, setProjectsClass] = useState("fade-in");
 
 	const [toggled, setToggled] = useState({
@@ -72,6 +78,8 @@ const Projects = () => {
 			setProjectsClass("fade-in");
 		}, 200);
 	};
+
+	let projectCount = 0;
 
 	//
 	// Return
@@ -162,64 +170,76 @@ const Projects = () => {
 					</div>
 					<div className={`projects-container ${projectsClass}`}>
 						{Paths &&
-							Paths.map((category) => {
+							Paths.map((category, categoryIndex) => {
 								return Object.entries(category).map(([key, items]) => {
 									items.sort(
 										(a, b) =>
 											new Date(b.completionDate) - new Date(a.completionDate)
 									);
 									return items.map((item) => {
-										const imageSrc = imageContexts[key](
-											"./" + item.featuredImg
-										);
-										return (
-											<div
-												className={`project ${
-													toggled[item.categoryOne] ||
-													toggled[item.categoryTwo] ||
-													!Object.values(toggled).some((val) => val)
-														? ""
-														: "hidden"
-												} `}
-												key={item.id}
-											>
-												<Link
-													to={{
-														pathname: "/projects/" + item.directory,
-														state: { projects: items },
-													}}
+										projectCount++;
+
+										if (projectCount <= displayedProjectsCount) {
+											const imageSrc = imageContexts[key](
+												"./" + item.featuredImg
+											);
+											return (
+												<div
+													className={`project ${
+														toggled[item.categoryOne] ||
+														toggled[item.categoryTwo] ||
+														!Object.values(toggled).some((val) => val)
+															? ""
+															: "hidden"
+													} `}
 													key={item.id}
 												>
-													<div className="featured-photo">
-														<img
-															src={
-																imageSrc.default ? imageSrc.default : imageSrc
-															}
-															alt={item.name}
-														/>
-														<button>View Project</button>
-													</div>
-												</Link>
-
-												<div className="title">
 													<Link
-														to={"/projects/" + item.directory}
+														to={{
+															pathname: "/projects/" + item.directory,
+															state: { projects: items },
+														}}
 														key={item.id}
 													>
-														<h3>{item.name}</h3>
+														<div className="featured-photo">
+															<img
+																src={
+																	imageSrc.default ? imageSrc.default : imageSrc
+																}
+																alt={item.name}
+															/>
+															<button>View Project</button>
+														</div>
 													</Link>
-												</div>
-												<div className="categories">
-													<div className="cat-container">
-														<span>{item.categoryStringOne}</span>
-														<span>{item.categoryStringTwo}</span>
+
+													<div className="title">
+														<Link
+															to={"/projects/" + item.directory}
+															key={item.id}
+														>
+															<h3>{item.name}</h3>
+														</Link>
+													</div>
+													<div className="categories">
+														<div className="cat-container">
+															<span>{item.categoryStringOne}</span>
+															<span>{item.categoryStringTwo}</span>
+														</div>
 													</div>
 												</div>
-											</div>
-										);
+											);
+										} else {
+											return null;
+										}
 									});
 								});
 							})}
+					</div>
+					<div className="load-more-container">
+						<div className="button-bar"></div>
+						<button onClick={loadMoreProjects} className="load-more">
+							LOAD MORE
+						</button>
 					</div>
 				</section>
 			</div>

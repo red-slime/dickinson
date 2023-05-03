@@ -61,6 +61,8 @@ const Image = React.memo(({ src, alt, isActive, onClick }) => (
 ));
 
 const ProjectViewer = () => {
+	const [featuredClass, setFeaturedClass] = useState("fade-in-right");
+
 	const { directory } = useParams();
 	const project = allProjects.find(
 		(project) => project.directory === directory
@@ -123,21 +125,44 @@ const ProjectViewer = () => {
 	const handlePrevImage = () => {
 		const currentIndex = images.findIndex((src) => src === featuredSrc);
 		const prevIndex = (currentIndex - 1 + images.length) % images.length;
-		setFeaturedSrc(images[prevIndex]);
+		// setFeaturedSrc(images[prevIndex]);
 		setActiveImg(prevIndex);
+		setFeaturedClass("fade-out-left");
+		setTimeout(() => {
+			setFeaturedSrc(images[prevIndex]);
+			setFeaturedClass("fade-in-left");
+		}, 200);
 	};
 
 	const handleNextImage = () => {
 		const currentIndex = images.findIndex((src) => src === featuredSrc);
 		const nextIndex = (currentIndex + 1) % images.length;
-		setFeaturedSrc(images[nextIndex]);
+		// setFeaturedSrc(images[nextIndex]);
 		setActiveImg(nextIndex);
+		setFeaturedClass("fade-out-right");
+		setTimeout(() => {
+			setFeaturedSrc(images[nextIndex]);
+			setFeaturedClass("fade-in-right");
+		}, 200);
 	};
 
 	const handleSetActiveImage = (imageSrc, index) => () => {
-		setFeaturedSrc(imageSrc);
+		// setFeaturedSrc(imageSrc);
 		setActiveImg(index);
+		setFeaturedClass("fade-out-right");
+		setTimeout(() => {
+			setFeaturedSrc(imageSrc);
+			setFeaturedClass("fade-in-right");
+		}, 200);
 	};
+
+	// const handleToggle = (cat) => {
+	// 	setFeaturedClass("fade-out-right");
+	// 	setTimeout(() => {
+	// 		setFeaturedSrc(imageSrc);
+	// 		setProjectsClass("fade-in-right");
+	// 	}, 200);
+	// };
 
 	useEffect(() => {
 		window.scrollTo({
@@ -156,18 +181,20 @@ const ProjectViewer = () => {
 				<div className="carousel">
 					<div
 						className="featured"
-						style={{ width: images.length === 1 ? "100%" : "auto" }}
+						style={{ width: images.length === 1 ? "100%" : undefined }}
 					>
 						<div
 							className="arrow-container arrow-container-left"
 							onClick={handlePrevImage}
+							style={{ display: images.length === 1 ? "none" : "flex" }}
 						>
 							<img src={AngleLeft} alt="carousel-left-arrow" />
 						</div>
-						<img src={featuredSrc} alt={featuredSrc} />
+						<img src={featuredSrc} alt={featuredSrc} class={featuredClass} />
 						<div
 							className="arrow-container arrow-container-right"
 							onClick={handleNextImage}
+							style={{ display: images.length === 1 ? "none" : "flex" }}
 						>
 							<img src={AngleRight} alt="carousel-right-arrow" />
 						</div>
