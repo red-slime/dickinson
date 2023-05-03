@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Paths from "./paths.json";
 import { Link } from "react-router-dom";
-import FilterIcon from "../../assets/icons/filter-list-regular.svg";
+// import FilterIcon from "../../assets/icons/filter-list-regular.svg";
 import "./projects.styles.scss";
 
 // Remember scroll position
@@ -25,7 +25,6 @@ const useScrollPosition = (key) => {
 	}, [key]);
 };
 
-// Import all arrays from paths.json
 const imageContexts = {
 	commercial: require.context(
 		"../../assets/projects/commercial",
@@ -51,6 +50,7 @@ const imageContexts = {
 
 const Projects = () => {
 	useScrollPosition("projects_page");
+	const [projectsClass, setProjectsClass] = useState("fade-in");
 
 	const [toggled, setToggled] = useState({
 		Healthcare: false,
@@ -61,8 +61,16 @@ const Projects = () => {
 		Hospitality: false,
 		InteriorDesign: false,
 	});
+
 	const handleToggle = (cat) => {
-		setToggled({ ...toggled, [cat]: !toggled[cat] });
+		setProjectsClass("fade-out");
+		setTimeout(() => {
+			setToggled((prevState) => ({
+				...prevState,
+				[cat]: !prevState[cat],
+			}));
+			setProjectsClass("fade-in");
+		}, 200);
 	};
 
 	//
@@ -152,7 +160,7 @@ const Projects = () => {
 							</li>
 						</ul>
 					</div>
-					<div className="projects-container">
+					<div className={`projects-container ${projectsClass}`}>
 						{Paths &&
 							Paths.map((category) => {
 								return Object.entries(category).map(([key, items]) => {
@@ -172,10 +180,9 @@ const Projects = () => {
 													!Object.values(toggled).some((val) => val)
 														? ""
 														: "hidden"
-												}`}
+												} `}
 												key={item.id}
 											>
-												{/* <Link to={"/projects/" + item.directory} key={item.id}> */}
 												<Link
 													to={{
 														pathname: "/projects/" + item.directory,
