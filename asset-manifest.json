@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dickinson/static/css/main.4bd0879a.css",
-    "main.js": "/dickinson/static/js/main.4fc06416.js",
+    "main.css": "/dickinson/static/css/main.73707810.css",
+    "main.js": "/dickinson/static/js/main.888d33b7.js",
     "static/js/787.4005e721.chunk.js": "/dickinson/static/js/787.4005e721.chunk.js",
     "static/media/Beehive-Loop (5).jpg": "/dickinson/static/media/Beehive-Loop (5).ba4c9d94b22bbb8974f7.jpg",
     "static/media/Walton-Options (4).jpg": "/dickinson/static/media/Walton-Options (4).50b9883b0ec481f5c5b6.jpg",
@@ -221,7 +221,6 @@
     "static/media/GothamPro.woff": "/dickinson/static/media/GothamPro.e8a62b93fba22b5aecf5.woff",
     "static/media/Chalet-LondonNineteenSixty.woff": "/dickinson/static/media/Chalet-LondonNineteenSixty.8d43a38dd2e4d4142b42.woff",
     "static/media/instagram.svg": "/dickinson/static/media/instagram.116ad97e1f8e0638fcb7d5aed6800697.svg",
-    "static/media/filter-list-regular.svg": "/dickinson/static/media/filter-list-regular.7dd0b8f8f2e9c09a6bd94807310dca0b.svg",
     "index.html": "/dickinson/index.html",
     "static/media/bars-solid.svg": "/dickinson/static/media/bars-solid.dd92aed316c5967acbf1f7094cd87de4.svg",
     "static/media/xmark-large-solid.svg": "/dickinson/static/media/xmark-large-solid.d0c90afb4e8bb351e446d22db326cab5.svg",
@@ -232,12 +231,12 @@
     "static/media/angle-down-light.svg": "/dickinson/static/media/angle-down-light.6ab186f5464f6cf0e58c657ba37f9cf1.svg",
     "static/media/angle-up-light.svg": "/dickinson/static/media/angle-up-light.c4f34d87468ac819292753cbcf155239.svg",
     "static/media/angle-left-light.svg": "/dickinson/static/media/angle-left-light.fe41386f9ce3dc108d1c6ad3fa272d1a.svg",
-    "main.4bd0879a.css.map": "/dickinson/static/css/main.4bd0879a.css.map",
-    "main.4fc06416.js.map": "/dickinson/static/js/main.4fc06416.js.map",
+    "main.73707810.css.map": "/dickinson/static/css/main.73707810.css.map",
+    "main.888d33b7.js.map": "/dickinson/static/js/main.888d33b7.js.map",
     "787.4005e721.chunk.js.map": "/dickinson/static/js/787.4005e721.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4bd0879a.css",
-    "static/js/main.4fc06416.js"
+    "static/css/main.73707810.css",
+    "static/js/main.888d33b7.js"
   ]
 }
