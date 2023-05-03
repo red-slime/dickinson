@@ -36,13 +36,23 @@ const imageContexts = {
 		true,
 		/\.(png|jpe?g|svg)$/
 	),
+	government: require.context(
+		"../../assets/projects/government",
+		true,
+		/\.(png|jpe?g|svg)$/
+	),
 	healthcare: require.context(
 		"../../assets/projects/healthcare",
 		true,
 		/\.(png|jpe?g|svg)$/
 	),
-	government: require.context(
-		"../../assets/projects/government",
+	historicPreservation: require.context(
+		"../../assets/projects/historic-preservation",
+		true,
+		/\.(png|jpe?g|svg)$/
+	),
+	hospitality: require.context(
+		"../../assets/projects/hospitality",
 		true,
 		/\.(png|jpe?g|svg)$/
 	),

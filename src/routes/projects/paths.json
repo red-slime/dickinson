@@ -13,7 +13,7 @@
 				"categoryTwo": "",
 				"categoryStringOne": "Commercial",
 				"categoryStringTwo": "",
-				"featured": true
+				"featured": ""
 			},
 			{
 				"id": 2,
@@ -52,9 +52,9 @@
 				"squareFootage": "7,000",
 				"description": "For the bank’s first location in Evans, the client wanted to announce their presence without an exterior or interior that was too showy. Understanding this, as well as the fact that the branch would serve as an anchor in this free-standing, multi-tenant structure, Dickinson Architects designed a façade that is a contemporary interpretation of classical masonry details with an elevation that blends brick detail work, including extensive corbeling and dentils, with steel and glass canopies. The interior is a contemporary yet welcoming space using warm wood from the suspended ceiling and elegant, all-glass storefront partitions. The resulting space nods toward classic design with a modern twist.",
 				"categoryOne": "Commercial",
-				"categoryTwo": "",
+				"categoryTwo": "InteriorDesign",
 				"categoryStringOne": "Commercial",
-				"categoryStringTwo": "",
+				"categoryStringTwo": "Interior Design",
 				"featured": false
 			},
 			{
@@ -94,9 +94,9 @@
 				"squareFootage": "4,200",
 				"description": "IT support expert Premier Networx is one of the fastest-growing companies in America. As such, they turned to Dickinson Architects to help them design a state-of-the-art cyber technology center that not only accommodates current and future technological needs, but contains a variety of workspaces designed for maximum efficiency and employee comfort. The resulting space contains an impressive variety of flex spaces to meet the ever-changing needs of this industry’s workforce.",
 				"categoryOne": "Commercial",
-				"categoryTwo": "",
+				"categoryTwo": "InteriorDesign",
 				"categoryStringOne": "Commercial",
-				"categoryStringTwo": "",
+				"categoryStringTwo": "Interior Design",
 				"featured": false
 			},
 			{
@@ -122,9 +122,9 @@
 				"squareFootage": "2,200",
 				"description": "Dickinson Architects helped SRP Federal Credit Union change their building brand to provide a more member-centric experience at their new branch at a busy entry point to the city. Open spaces created a feeling of transparency, an increasingly important term in modern banking, and wood textures combined with warm tones and polished porcelain surfaces created an enjoyable experience for members. The resulting branch is warm, comfortable, and light, with plenty of details to draw the eye.",
 				"categoryOne": "Commercial",
-				"categoryTwo": "",
+				"categoryTwo": "InteriorDesign",
 				"categoryStringOne": "Commercial",
-				"categoryStringTwo": "",
+				"categoryStringTwo": "Interior Design",
 				"featured": false
 			},
 			{
@@ -150,9 +150,9 @@
 				"squareFootage": "6,500",
 				"description": "Walton Options, a nonprofit whose mission is to advocate for those with disabilities, had an office complex in downtown Augusta in desperate need of updating. Dickinson Architects helmed this project, which included demolishing one of the two existing facilities to make way for a state-of-the-art multipurpose space twice the size of the original structure. That office not only functions as the organization’s corporate headquarters, but also serves a variety of clients from a 16-county area who visit the center for everything from assistive technology loans to employment services classes. Exterior improvements were made to the second building and tied the two together with outdoor space, connected sidewalks, and greenspace. The buildings also have accessible entrances at grade, which was previously unavailable.",
 				"categoryOne": "Commercial",
-				"categoryTwo": "",
+				"categoryTwo": "InteriorDesign",
 				"categoryStringOne": "Commercial",
-				"categoryStringTwo": "",
+				"categoryStringTwo": "Interior Design",
 				"featured": false
 			}
 		],
@@ -169,7 +169,7 @@
 				"categoryTwo": "",
 				"categoryStringOne": "Education",
 				"categoryStringTwo": "",
-				"featured": true
+				"featured": ""
 			},
 			{
 				"id": 2,
@@ -183,7 +183,7 @@
 				"categoryTwo": "",
 				"categoryStringOne": "Education",
 				"categoryStringTwo": "",
-				"featured": true
+				"featured": ""
 			},
 			{
 				"id": 3,
@@ -194,10 +194,10 @@
 				"squareFootage": "20,195",
 				"description": "Dickinson Architects assisted Augusta University in updating its one-story Fine Arts Center, home to the university’s music department, in a project that focused on acoustical quality. The building’s past acoustical issues were resolved through increasing the volume of the space by raising the roof, providing adjustable acoustical controls, and the introduction of an articulating wall, a feature that provides both practical and aesthetic properties. The renovation also included three classrooms, individual practice areas, piano studios, and instrument storage areas.",
 				"categoryOne": "Education",
-				"categoryTwo": "",
+				"categoryTwo": "InteriorDesign",
 				"categoryStringOne": "Education",
-				"categoryStringTwo": "",
-				"featured": true
+				"categoryStringTwo": "Interior Design",
+				"featured": ""
 			},
 			{
 				"id": 4,
@@ -208,10 +208,10 @@
 				"squareFootage": "9,745",
 				"description": "Augusta Preparatory Day School has partnered with Dickinson Architects to create the W. Rodger Giles Institute of Science and Engineering, a building that houses more than just classrooms. Instead, it creates an experience that sparks its students’ curiosity. Based on the Sagan Institute for Inquiry, this new building will provide a learning ecosystem that is interwoven, inspiring, individualized, illuminating, and iterative. Its purpose is to nurture students who, when they graduate, are ready to meet the challenges of the Fourth Industrial Revolution head-on, and the school aims to accomplish this through a variety of collaborative spaces. This project is currently in the construction phase.",
 				"categoryOne": "Education",
-				"categoryTwo": "",
+				"categoryTwo": "InteriorDesign",
 				"categoryStringOne": "Education",
-				"categoryStringTwo": "",
-				"featured": true
+				"categoryStringTwo": "Interior Design",
+				"featured": ""
 			},
 			{
 				"id": 5,
@@ -225,7 +225,7 @@
 				"categoryTwo": "",
 				"categoryStringOne": "Education",
 				"categoryStringTwo": "",
-				"featured": true
+				"featured": ""
 			},
 			{
 				"id": 6,
@@ -234,12 +234,12 @@
 				"directory": "HELAG",
 				"completionDate": "2022",
 				"squareFootage": "29,000",
-				"description": "Dickinson Architects designed the Heritage Early Learning Academy and Gymnasium, two new facilities located in the designated historic district of Olde Town and therefore subject to the district’s strict design guidelines. For the Early Learning Academy, updated Craftsman detailing on the exterior transitions to a colorful interior design full of visual interest and details to stimulate the Pre-K students the Academy serves. The facility includes 10 classrooms over two floors, a commercial kitchen, office space, and a second-floor playroom with storefront windows open to the two-story atrium. The Gymnasium, designed in the same Spanish style as the original Heritage Academy building, includes a concession area, locker rooms, offices, and a weight room. The gymnasium won a New Construction Award from Historic Augusta in 2022.",
+				"description": "Dickinson Architects designed the Heritage Early Learning Academy and Gymnasium, two new facilities located in the designated historic district of Olde Town and therefore subject to the district’s strict design guidelines. For the Early Learning Academy, updated Craftsman detailing on the exterior transitions to a colorful  full of visual interest and details to stimulate the Pre-K students the Academy serves. The facility includes 10 classrooms over two floors, a commercial kitchen, office space, and a second-floor playroom with storefront windows open to the two-story atrium. The Gymnasium, designed in the same Spanish style as the original Heritage Academy building, includes a concession area, locker rooms, offices, and a weight room. The gymnasium won a New Construction Award from Historic Augusta in 2022.",
 				"categoryOne": "Education",
-				"categoryTwo": "",
+				"categoryTwo": "InteriorDesign",
 				"categoryStringOne": "Education",
-				"categoryStringTwo": "",
-				"featured": true
+				"categoryStringTwo": "Interior Design",
+				"featured": ""
 			},
 			{
 				"id": 7,
@@ -253,7 +253,7 @@
 				"categoryTwo": "",
 				"categoryStringOne": "Education",
 				"categoryStringTwo": "",
-				"featured": true
+				"featured": ""
 			},
 			{
 				"id": 8,
@@ -267,7 +267,7 @@
 				"categoryTwo": "",
 				"categoryStringOne": "Education",
 				"categoryStringTwo": "",
-				"featured": true
+				"featured": ""
 			},
 			{
 				"id": 9,
@@ -281,7 +281,7 @@
 				"categoryTwo": "",
 				"categoryStringOne": "Education",
 				"categoryStringTwo": "",
-				"featured": true
+				"featured": ""
 			},
 			{
 				"id": 10,
@@ -295,7 +295,7 @@
 				"categoryTwo": "",
 				"categoryStringOne": "Education",
 				"categoryStringTwo": "",
-				"featured": true
+				"featured": ""
 			},
 			{
 				"id": 11,
@@ -309,7 +309,52 @@
 				"categoryTwo": "",
 				"categoryStringOne": "Education",
 				"categoryStringTwo": "",
-				"featured": true
+				"featured": ""
+			}
+		],
+
+		"government": [
+			{
+				"id": 1,
+				"name": "5th Street Bridge",
+				"featuredImg": "5th Street Bridge/5th-Street-Bridge (1).jpg",
+				"directory": "5th Street Bridge",
+				"completionDate": "2022",
+				"squareFootage": "40,000",
+				"description": "Commissioned to design the elements that convert the roadway into public space, Dickinson Architects addressed the 5th Street Bridge’s history by retaining its original metal railings, just one of the original features to be preserved. New design features include an Art Zone with sculpture pads and paving squares for sidewalk chalk competitions and a Kid Zone with modern playground equipment including a maze. Shaded bench seating, device-charging benches, planters, landscaping, and colored concrete replacing the asphalt paving add to the park-like feel. Vibrant lights have been added to the  underside of the bridge and the shade structure canopies, allowing further illumination at night and the ability to change colors for holiday celebrations.",
+				"categoryOne": "Government",
+				"categoryTwo": "HistoricPreservation",
+				"categoryStringOne": "Government",
+				"categoryStringTwo": "Historic Preservation",
+				"featured": ""
+			},
+			{
+				"id": 2,
+				"name": "Columbia County Fire Stations",
+				"featuredImg": "ColCo Fire Stations/ColCo-Fire-Station.jpg",
+				"directory": "ColCo Fire Stations",
+				"completionDate": "2006",
+				"squareFootage": "20,000",
+				"description": "Dickinson Architects provided services for four fire stations in rural locations of a rapidly growing Columbia County. The station pictured serves as the headquarters for the North Columbia County area and contains administrative office space, eight sleeping rooms, four full baths, and three engine bays. The remaining three stations are designed around a prototype developed by the firm and all included facility flexibility, a program requirement.",
+				"categoryOne": "Government",
+				"categoryTwo": "",
+				"categoryStringOne": "Government",
+				"categoryStringTwo": "",
+				"featured": ""
+			},
+			{
+				"id": 3,
+				"name": "Wilkes",
+				"featuredImg": "Wilkes/Wilkes (1).jpg",
+				"directory": "Wilkes",
+				"completionDate": "2017",
+				"squareFootage": "70,000",
+				"description": "Dickinson Architects provided architectural services for a juvenile detention center in Wilkes County. Commissioned by the Georgia State Financing & Investment Commission, the project consisted of a 35,000-square-foot renovation of an existing adult detention facility and a 35,000-square-foot addition for student housing. The renovated building provides daily support and administrative services, while the housing building provides accommodations for up to 48 students.",
+				"categoryOne": "Government",
+				"categoryTwo": "",
+				"categoryStringOne": "Government",
+				"categoryStringTwo": "",
+				"featured": ""
 			}
 		],
 		"healthcare": [
@@ -325,7 +370,7 @@
 				"categoryTwo": "InteriorDesign",
 				"categoryStringOne": "Healthcare",
 				"categoryStringTwo": "Interior Design",
-				"featured": true
+				"featured": ""
 			},
 			{
 				"id": 2,
@@ -336,9 +381,9 @@
 				"squareFootage": "15,000",
 				"description": "Christ Community Health Services asked Dickinson Architects to design a renovation to the Widows’ Home for use as a health center for the underserved of Augusta while preserving the historic character of the building. It now houses a primary care clinic, a pediatric physical therapy suite, classrooms, resource center, counseling center, and conference roof. An addition to the back fits in seamlessly with the existing building while addressing the client’s administrative needs, and also houses an elevator to make the clinic aChrist-Community (1)essible for all its patients.",
 				"categoryOne": "Healthcare",
-				"categoryTwo": "InteriorDesign",
+				"categoryTwo": "",
 				"categoryStringOne": "Healthcare",
-				"categoryStringTwo": "Interior Design",
+				"categoryStringTwo": "",
 				"featured": false
 			},
 			{
@@ -370,48 +415,162 @@
 				"featured": false
 			}
 		],
-		"government": [
+		"historicPreservation": [
 			{
 				"id": 1,
-				"name": "5th Street Bridge",
-				"featuredImg": "5th Street Bridge/5th-Street-Bridge (1).jpg",
-				"directory": "5th Street Bridge",
-				"completionDate": "2022",
-				"squareFootage": "40,000",
-				"description": "Commissioned to design the elements that convert the roadway into public space, Dickinson Architects addressed the 5th Street Bridge’s history by retaining its original metal railings, just one of the original features to be preserved. New design features include an Art Zone with sculpture pads and paving squares for sidewalk chalk competitions and a Kid Zone with modern playground equipment including a maze. Shaded bench seating, device-charging benches, planters, landscaping, and colored concrete replacing the asphalt paving add to the park-like feel. Vibrant lights have been added to the  underside of the bridge and the shade structure canopies, allowing further illumination at night and the ability to change colors for holiday celebrations.",
-				"categoryOne": "Government",
-				"categoryTwo": "HistoricPreservation",
-				"categoryStringOne": "Government",
-				"categoryStringTwo": "Historic Preservation",
-				"featured": true
+				"name": "Crawford Depot",
+				"featuredImg": "Crawford Depot/Crawford-Depot (1).jpg",
+				"directory": "Crawford Depot",
+				"completionDate": "2011",
+				"squareFootage": "7,574",
+				"description": "The Crawford Depot rehabilitation was funded by the Georgia Department of Transportation’s Transportation Enhancement (TE) Grant program. The project spanned multiple phases, which included general building envelope improvements, new finishes, improved accessibility through exterior ramps, and assembly spaces. In 2016, the Crawford Depot project received the Georgia Historic Trust’s Excellence in Rehabilitation Award.",
+				"categoryOne": "HistoricPreservation",
+				"categoryTwo": "",
+				"categoryStringOne": "Historic Preservation",
+				"categoryStringTwo": "",
+				"featured": ""
 			},
 			{
 				"id": 2,
-				"name": "Columbia County Fire Stations",
-				"featuredImg": "ColCo Fire Stations/ColCo-Fire-Station.jpg",
-				"directory": "ColCo Fire Stations",
-				"completionDate": "2006",
-				"squareFootage": "20,000",
-				"description": "Dickinson Architects provided services for four fire stations in rural locations of a rapidly growing Columbia County. The station pictured serves as the headquarters for the North Columbia County area and contains administrative office space, eight sleeping rooms, four full baths, and three engine bays. The remaining three stations are designed around a prototype developed by the firm and all included facility flexibility, a program requirement.",
-				"categoryOne": "Government",
+				"name": "Historic Facades",
+				"featuredImg": "Historic Facades/1325 Greene.jpg",
+				"directory": "Historic Facades",
+				"completionDate": "2000",
+				"squareFootage": "",
+				"description": "For 15 years, Dickinson Architects was the prime consultant for Augusta-Richmond County Housing and Community Development’s façade restoration program, funded by a Community Development Block Grant. Dickinson Architects gained invaluable experience and has become well-versed in the unique complexities of historic renovation projects through its work on this program.",
+				"categoryOne": "HistoricPreservation",
 				"categoryTwo": "",
-				"categoryStringOne": "Government",
+				"categoryStringOne": "Historic Preservation",
 				"categoryStringTwo": "",
-				"featured": true
+				"featured": ""
 			},
 			{
 				"id": 3,
-				"name": "Wilkes",
-				"featuredImg": "Wilkes/Wilkes (1).jpg",
-				"directory": "Wilkes",
-				"completionDate": "2017",
-				"squareFootage": "70,000",
-				"description": "Dickinson Architects provided architectural services for a juvenile detention center in Wilkes County. Commissioned by the Georgia State Financing & Investment Commission, the project consisted of a 35,000-square-foot renovation of an existing adult detention facility and a 35,000-square-foot addition for student housing. The renovated building provides daily support and administrative services, while the housing building provides accommodations for up to 48 students.",
-				"categoryOne": "Government",
+				"name": "Wilson and Lamar House",
+				"featuredImg": "Wilson-Lamar House/Lamar House 01.jpg",
+				"directory": "Wilson-Lamar House",
+				"completionDate": "2005",
+				"squareFootage": "7,500",
+				"description": "Dickinson Architects prepared the contract documents for the façade restoration of both the Woodrow Wilson House and the Boyhood Home of Joseph Lamar, including replacing windows, cleaning brick, and returning the historic structures to their original designs. In addition, the firm prepared drawings to renovate the interior of the Lamar House for use as a business office and the interior of the Wilson House for use as exhibit space.",
+				"categoryOne": "HistoricPreservation",
 				"categoryTwo": "",
-				"categoryStringOne": "Government",
+				"categoryStringOne": "Historic Preservation",
 				"categoryStringTwo": "",
-				"featured": true
+				"featured": ""
+			}
+		],
+		"hospitality": [
+			{
+				"id": 1,
+				"name": "CSRA Goodwill Career Campus / Helms College",
+				"featuredImg": "Goodwill/Goodwill (1).jpg",
+				"directory": "Goodwill",
+				"completionDate": "2013",
+				"squareFootage": "85,000",
+				"description": "Dickinson Architects repurposed an existing shopping center to create the Goodwill Career Campus, an adaptive reuse project that serves as home for Goodwill’s donation and retail emporium, as well as a collection of buildings that make up Helms College. The Helms College campus includes a bookstore, fine-dining restaurant Edgar’s Grille, conference/convention center, hospitality institute, and administrative offices. Goodwill executives were so pleased with the results of Phases I-III that they asked Dickinson Architects in 2021 to lead Phase IV of the renovations. Phase IV includes a stand-alone Student Welcome Center, a pastry kitchen, classroom areas, storage space, and C-suite offices and is currently under construction.",
+				"categoryOne": "Hospitality",
+				"categoryTwo": "InteriorDesign",
+				"categoryStringOne": "Hospitality",
+				"categoryStringTwo": "Interior Design",
+				"featured": ""
+			},
+			{
+				"id": 2,
+				"name": "Hyatt House",
+				"featuredImg": "Hyatt House/Hyatt-House (1).jpg",
+				"directory": "Hyatt House",
+				"completionDate": "2019",
+				"squareFootage": "141,288",
+				"description": "Dickinson Architects provided architectural and interior design services for the Hyatt House, an eight-story downtown Augusta hotel that features an eighth-floor amenities level with a rooftop bar and meeting spaces. With an aggressive construction schedule, the firm used a precast wall panel system; wall panels were manufactured off-site and assembled on-site, allowing the shell of the building to be constructed in a fraction of the time it would take using traditional methods. Dickinson Architects solved the constrained site size and parking availability challenges by designing two levels of guest parking under the guest room floors.",
+				"categoryOne": "Hospitality",
+				"categoryTwo": "InteriorDesign",
+				"categoryStringOne": "Hospitality",
+				"categoryStringTwo": "Interior Design",
+				"featured": ""
+			},
+			{
+				"id": 3,
+				"name": "Augusta t Hotel & Suites",
+				"featuredImg": "Marriott Hotel & Suites/Marriot-Hotel (1).jpg",
+				"directory": "Marriott Hotel & Suites",
+				"completionDate": "2000",
+				"squareFootage": "113,000",
+				"description": "Dickinson Architects provided both architectural and interior design services for the seven-story, 136-room suite style hotel on the Augusta Riverwalk downtown. The facility needed to blend seamlessly with its historic surroundings and flow into the adjoining convention center, but project challenges included the limited availability of land and the need for an elevated bridge connecting the second floor of the hotel to the convention center. These challenges required careful detail during both the design and construction phases. In 2002, the Marriott was named Best New Hotel in North America by Carlson Companies.",
+				"categoryOne": "Hospitality",
+				"categoryTwo": "",
+				"categoryStringOne": "Hospitality",
+				"categoryStringTwo": "",
+				"featured": ""
+			},
+			{
+				"id": 4,
+				"name": "Augusta Marriott Riverfront Convention Center",
+				"featuredImg": "Marriott Riverfront Convention Center/Marriott-Convention-Center (1).jpg",
+				"directory": "Marriott Riverfront Convention Center",
+				"completionDate": "2003",
+				"squareFootage": "57,000",
+				"description": "Dickinson Architects added multipurpose space to the Augusta Riverfront Convention Center for use as offices, a gift shop, six multiuse conference rooms, back-of-house food service areas, small and large assembly spaces, and a large storage area on the bottom floor. Using movable partitions gives the convention center flexibility in the configuration of rooms, and conference rooms were wired in a way that would allow the center to adapt to ever-changing technological advancements.",
+				"categoryOne": "Hospitality",
+				"categoryTwo": "",
+				"categoryStringOne": "Hospitality",
+				"categoryStringTwo": "",
+				"featured": ""
+			},
+			{
+				"id": 5,
+				"name": "Ronald McDonald House",
+				"featuredImg": "Ronald McDonald House/Ronald-McDonald-House (1).jpg",
+				"directory": "Ronald McDonald House",
+				"completionDate": "2014",
+				"squareFootage": "28,000",
+				"description": "Dickinson Architects designed the Ronald McDonald House in Augusta, a new facility that doubled the size of the nonprofit organization’s previous house and includes a central check-in area, administrative offices, a large family dining and living area, family and group kitchens, and 22 guest rooms. Now adjacent to the Children’s Hospital of Georgia, the new Ronald McDonald House is more convenient for families, and, with a new look and residential feel, it offers guests a warm and supportive environment in which to heal.",
+				"categoryOne": "Hospitality",
+				"categoryTwo": "InteriorDesign",
+				"categoryStringOne": "Hospitality",
+				"categoryStringTwo": "Interior Design",
+				"featured": ""
+			},
+			{
+				"id": 6,
+				"name": "Sage Valley Hospitality Cottage",
+				"featuredImg": "Sage Valley Cottage/Sage-Valley-Cottage (1).jpg",
+				"directory": "Ronald McDonald House",
+				"completionDate": "2014",
+				"squareFootage": "15,000",
+				"description": "Dickinson Architects designed this hospitality cottage to be the centerpiece of entertainment at the exclusive Sage Valley Golf Club in Graniteville, South Carolina. The cottage includes 10 bedrooms, two kitchens, and six spa treatment rooms. The entertainment spaces on the first and second floors were designed to accommodate large groups while retaining their residential scale and warmth. The cottage is sited to take advantage of the scenic views over the club’s course.",
+				"categoryOne": "Hospitality",
+				"categoryTwo": "InteriorDesign",
+				"categoryStringOne": "Hospitality",
+				"categoryStringTwo": "Interior Design",
+				"featured": ""
+			},
+			{
+				"id": 7,
+				"name": "Sage Valley Locker Room",
+				"featuredImg": "Sage Valley Locker Room/Sage-Valley-Lockers (1).jpg",
+				"directory": "Sage Valley Locker Room",
+				"completionDate": "2015",
+				"squareFootage": "45,000",
+				"description": "Dickinson Architects provided a 19th Hole experience to Sage Valley Golf Club members when the firm designed the addition to the Clubhouse. Now on par with other clubs of its stature, the addition includes an expansive locker room with a men’s lounge located within and an expanded grill. The interior details include wainscoting and coffered ceilings to give the spaces an upscale and exclusive, yet traditional, feel.",
+				"categoryOne": "Hospitality",
+				"categoryTwo": "InteriorDesign",
+				"categoryStringOne": "Hospitality",
+				"categoryStringTwo": "Interior Design",
+				"featured": ""
+			},
+			{
+				"id": 8,
+				"name": "Savannah Rapids Pavilion",
+				"featuredImg": "Savannah Rapids Pavilion/Savannah-Rapids (1).jpg",
+				"directory": "Savannah Rapids Pavilion",
+				"completionDate": "1993",
+				"squareFootage": "25,000",
+				"description": "The Savannah Rapids Pavilion is situated on the banks of the Savannah River and adjacent to the Augusta Canal, and the design provided by Dickinson Architects molds the structure into the surrounding hillside. Two large skylights bask the exposed-beam interior in light and are highlighted at night by indirect lighting. An observation deck overlooking the water adds to the resort-like atmosphere of the building, which features two banquet halls, a full kitchen, administrative offices, three meeting rooms, a dedication monument, and energy conservation features.",
+				"categoryOne": "Hospitality",
+				"categoryTwo": "InteriorDesign",
+				"categoryStringOne": "Hospitality",
+				"categoryStringTwo": "Interior Design",
+				"featured": ""
 			}
 		]
 	}
