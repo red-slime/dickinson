@@ -15,6 +15,10 @@ const Header = () => {
 		return location.pathname === path ? "active-link" : "";
 	};
 
+	const getBackground = (path) => {
+		return location.pathname === path ? "mobile-gray" : "";
+	};
+
 	const scrollToBottom = () => {
 		window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
 	};
@@ -108,7 +112,7 @@ const Header = () => {
 				</div>
 			</div>
 			<div
-				className="mobile-menu"
+				className={`mobile-menu ${getBackground("/about")}`}
 				style={{ display: isMenuOpen ? "block" : "none" }}
 			>
 				<nav>

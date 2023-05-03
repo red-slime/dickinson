@@ -75,11 +75,11 @@ const Projects = () => {
 				<section className="intro">
 					<div className="text">
 						<p>
-							General Project Landing Page: Intro In our 40 years of designing
-							environments with superior spaces, Dickinson Architects has become
-							a trusted partner in projects of all sizes and scopes. We inspire
-							confidence from our clients because we believe every space should
-							first and foremost serve those who occupy it.
+							In our 40 years of designing environments with superior spaces,
+							Dickinson Architects has become a trusted partner in projects of
+							all sizes and scopes. We inspire confidence from our clients
+							because we believe every space should first and foremost serve
+							those who occupy it.
 						</p>
 					</div>
 					<div className="better">
@@ -87,12 +87,12 @@ const Projects = () => {
 						<h3>better spaces.</h3>
 						<h3>better lives.</h3>
 						<p className="better-desktop">
-							It's more than a promise to our clients. No matter the poject
+							It's more than a promise to our clients. No matter the project
 							type, it's a design philosophy that drives everything we do.
 						</p>
 						<p className="better-mobile">
 							It's more than a promise to our clients. <br></br>No matter the
-							poject type, it's a design philosophy that drives everything we
+							project type, it's a design philosophy that drives everything we
 							do.
 						</p>
 					</div>

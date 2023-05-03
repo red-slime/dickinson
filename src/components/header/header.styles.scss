@@ -16,6 +16,10 @@
 		align-items: center;
 		padding: $pad;
 		padding-top: calc($pad-tb + 40px);
+
+		@media (max-width: 428px) {
+			padding-top: $pad-tb;
+		}
 	}
 
 	.logo-container {
@@ -212,11 +216,11 @@
 			line-height: 1.5;
 		}
 
-		.location {
-		}
+		// .location {
+		// }
 
-		.contact {
-		}
+		// .contact {
+		// }
 
 		.socials {
 			display: flex;
@@ -235,4 +239,8 @@
 			}
 		}
 	}
+}
+
+.mobile-gray {
+	background: $light;
 }
