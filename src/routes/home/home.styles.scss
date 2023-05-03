@@ -32,6 +32,7 @@
 				background-image: none;
 				border-radius: 0;
 				height: auto;
+				margin-bottom: calc($spacer / 2);
 			}
 
 			.mobile-splash {
@@ -83,13 +84,9 @@
 				}
 
 				@media (max-width: 428px) {
-					height: 480px;
+					height: auto !important;
 					background: $yellow;
 					padding: 20px 30px;
-				}
-
-				@media (max-width: 400px) {
-					height: 380px;
 				}
 
 				div {
@@ -116,12 +113,14 @@
 					@media (max-width: 428px) {
 						height: 100%;
 						width: 100%;
+						padding: 20px 0;
 					}
 
 					.philosophy-mobile {
 						display: none;
 						@media (max-width: 428px) {
 							display: inline;
+							margin-bottom: 20px;
 						}
 					}
 
@@ -157,6 +156,7 @@
 
 						@media (max-width: 428px) {
 							font-size: 38px;
+							margin-bottom: 20px;
 						}
 
 						@media (max-width: 344px) {
@@ -184,7 +184,7 @@
 						}
 
 						@media (max-width: 428px) {
-							font-size: 24px;
+							font-size: 20px;
 						}
 
 						@media (max-width: 400px) {
@@ -243,6 +243,14 @@
 							// @media (max-width: 428px) {
 							// 	display: none;
 							// }
+						}
+
+						a {
+							transition: all 0.1s linear;
+						}
+
+						a:hover {
+							transform: scale(105%);
 						}
 					}
 				}
@@ -310,6 +318,10 @@
 				flex-direction: row;
 				align-items: center;
 				margin-bottom: $spacer;
+
+				@media (max-width: 428px) {
+					margin-bottom: 30px;
+				}
 
 				h1 {
 					flex-grow: 1;

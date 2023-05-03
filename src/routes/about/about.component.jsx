@@ -207,6 +207,10 @@ const members = [
 const videoSrc = "https://i.imgur.com/R87m7Hf.mp4";
 
 const About = () => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	const [activeIndex, setActiveIndex] = useState(null);
 	const [prevActiveIndex, setPrevActiveIndex] = useState(null);
 	const individualRefs = members.map(() => React.createRef());
@@ -251,7 +255,7 @@ const About = () => {
 							The Dickinson Architects team believes every space should serve
 							those who occupy it. The key to our intentionality is
 							comprehension. We uphold the culture we've built by aiming to
-							always meet the standards you see listed below. Our expertise is
+							always meet standards above your expectations. Our expertise is
 							rooted in the dedication we show to detail, the respect and
 							loyalty we have for each other and our clients, and the joy we
 							receive from sharing our legacy with the community.

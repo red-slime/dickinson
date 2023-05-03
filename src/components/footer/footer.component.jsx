@@ -1,11 +1,37 @@
+import { useState, useEffect, useRef } from "react";
 import "./footer.styles.scss";
 import FacebookSVG from "../../assets/icons/facebook.svg";
 import InstagramSVG from "../../assets/icons/instagram.svg";
 
 const Footer = () => {
+	const [isBottom, setIsBottom] = useState(false);
+	const footerRef = useRef();
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const bottom =
+				Math.ceil(window.innerHeight + window.scrollY) >=
+				document.documentElement.scrollHeight;
+			setIsBottom(bottom);
+		};
+
+		window.addEventListener("scroll", handleScroll);
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
+
+	useEffect(() => {
+		if (isBottom && window.location.hash === "#contact") {
+			footerRef.current.classList.add("bottom-reached");
+		} else {
+			footerRef.current.classList.remove("bottom-reached");
+		}
+	}, [isBottom]);
+
 	return (
-		<div id="contact" className="footer-container">
-			<div className="footer">
+		<div className="footer-container">
+			<div className="footer" ref={footerRef}>
 				<div className="bar"></div>
 				<div className="information-container">
 					<div className="lc-con">

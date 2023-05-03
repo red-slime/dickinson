@@ -41,9 +41,28 @@ $p5: 12px;
 $a-small: 14px;
 
 // Fonts
+
+/*** Start Chalet ***/
+
+// @font-face {
+// 	font-family: "Chalet";
+// 	src: url("./assets/fonts/Chalet-ParisNineteenSixty.woff") format("woff");
+// 	font-weight: 300; /* light */
+// 	font-style: normal; /* normal */
+// }
+
 @font-face {
 	font-family: "Chalet";
-	src: url("./assets/Chalet-LondonNineteenSixty.woff") format("woff");
+	src: url("./assets/fonts/Chalet-LondonNineteenSixty.woff") format("woff");
+	font-weight: 400; /* normal */
+	font-style: normal; /* normal */
+}
+
+@font-face {
+	font-family: "Chalet";
+	src: url("./assets/fonts/Chalet-NewYorkNineteenSixty.woff") format("woff");
+	font-weight: 600; /* bold */
+	font-style: normal; /* normal */
 }
 
 .chalet {
@@ -51,14 +70,43 @@ $a-small: 14px;
 	letter-spacing: 2px;
 }
 
+/*** End Chalet ***/
+
+/*** Start Gotham ***/
+
+// @font-face {
+// 	font-family: "Gotham";
+// 	src: url("./assets/fonts/Gotham-Light.woff") format("woff");
+// 	font-weight: 300; /* light */
+// 	font-style: normal; /* normal */
+// }
+
 @font-face {
 	font-family: "Gotham";
-	src: url("./assets/GothamPro.woff") format("woff");
+	src: url("./assets/fonts/GothamPro.woff") format("woff");
+	font-weight: 400; /* normal */
+	font-style: normal; /* normal */
 }
 
 @font-face {
+	font-family: "Gotham";
+	src: url("./assets/fonts/Gotham-Medium.woff") format("woff");
+	font-weight: 500; /* medium */
+	font-style: normal; /* normal */
+}
+
+@font-face {
+	font-family: "Gotham";
+	src: url("./assets/fonts/Gotham-Bold.woff") format("woff");
+	font-weight: 600; /* bedium */
+	font-style: normal; /* normal */
+}
+
+/*** End Gotham ***/
+
+@font-face {
 	font-family: "Bodoni";
-	src: url("./assets/BodoniPoster.woff") format("woff");
+	src: url("./assets/fonts/BodoniPoster.woff") format("woff");
 }
 
 // Headings

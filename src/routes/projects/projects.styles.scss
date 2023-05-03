@@ -192,21 +192,6 @@
 			position: relative;
 			margin-bottom: calc($spacer * 1.4);
 
-			&:after {
-				content: "";
-				position: absolute;
-				top: 0;
-				left: -20px;
-				min-width: 428px;
-				height: 100%;
-				background: $white;
-				z-index: -1;
-
-				@media (max-width: 428px) {
-					background: $light;
-				}
-			}
-
 			@media (max-width: 1020px) {
 				margin-bottom: calc($spacer * 1.2);
 			}
@@ -216,14 +201,18 @@
 			}
 
 			.toggle {
-				display: flex;
+				display: none;
 				align-items: center;
 				border-bottom: 1px solid $coal;
 				margin-bottom: 10px;
+
+				@media (max-width: 428px) {
+					display: flex;
+				}
+
 				span {
 					font-family: Gotham;
 					text-transform: uppercase;
-					font-weight: bold;
 					font-size: 14px;
 					letter-spacing: 1.5px;
 				}
@@ -234,68 +223,77 @@
 				}
 			}
 
-			ul {
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-				display: flex;
-				justify-content: space-between;
-				flex-wrap: wrap;
+			.scrolling-container {
+				overflow: hidden;
+				overflow-x: scroll;
 				scrollbar-width: none;
-
-				@media (max-width: 1060px) {
-					justify-content: flex-start;
-					gap: 0px 20px;
-				}
-
-				@media (max-width: 640px) {
+				ul {
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+					display: flex;
 					justify-content: space-between;
-					//gap: 0;
-				}
-
-				@media (max-width: 530px) {
-					justify-content: flex-start;
-					gap: 0px 20px;
-				}
-
-				@media (max-width: 428px) {
-					flex-wrap: nowrap;
-					overflow-x: scroll;
-				}
-
-				li {
-					position: relative;
-					cursor: pointer;
-					font-family: "Gotham";
-					font-size: 14px;
-					text-transform: uppercase;
-					letter-spacing: 2px;
-					white-space: nowrap;
-
-					@media (max-width: 1160px) {
-						font-size: 12px;
-					}
+					flex-wrap: wrap;
+					scrollbar-width: none;
 
 					@media (max-width: 1060px) {
-						margin: 5px 0;
+						justify-content: flex-start;
+						gap: 0px 20px;
 					}
-				}
 
-				li.active {
-					text-decoration: underline;
-				}
+					@media (max-width: 640px) {
+						justify-content: space-between;
+						//gap: 0;
+					}
 
-				li.active::after {
-					content: " X";
-					position: absolute;
-					top: 2px;
-					right: -16px;
-					color: #000;
-					font-size: 10px;
+					@media (max-width: 530px) {
+						justify-content: flex-start;
+						gap: 0px 20px;
+					}
 
-					@media (max-width: 1160px) {
-						right: -12px;
-						top: 1px;
+					@media (max-width: 428px) {
+						flex-wrap: nowrap;
+					}
+
+					li {
+						position: relative;
+						cursor: pointer;
+						font-family: "Gotham";
+						font-size: 14px;
+						text-transform: uppercase;
+						letter-spacing: 2px;
+						white-space: nowrap;
+
+						@media (max-width: 1160px) {
+							font-size: 12px;
+						}
+
+						@media (max-width: 1060px) {
+							margin: 5px 0;
+						}
+					}
+
+					li.active {
+						text-decoration: underline;
+					}
+
+					li.active::after {
+						content: " X";
+						position: absolute;
+						top: 2px;
+						right: -16px;
+						color: #000;
+						font-size: 10px;
+
+						@media (max-width: 1160px) {
+							right: -12px;
+							top: 1px;
+						}
+
+						@media (max-width: 428px) {
+							right: -10px;
+							top: 1px;
+						}
 					}
 				}
 			}
@@ -498,7 +496,7 @@
 				border: none;
 				text-transform: uppercase;
 				background: none;
-
+				color: $black;
 				font-size: 20px;
 				transform: translateY(15px);
 			}

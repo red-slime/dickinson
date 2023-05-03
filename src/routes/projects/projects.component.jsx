@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Paths from "./paths.json";
 import { Link } from "react-router-dom";
-// import FilterIcon from "../../assets/icons/filter-list-regular.svg";
+import FilterIcon from "../../assets/icons/filter-list-regular.svg";
 import "./projects.styles.scss";
 
 // Remember scroll position
@@ -49,6 +49,52 @@ const imageContexts = {
 };
 
 const Projects = () => {
+	const scrollingContainerRef = useRef();
+	const shouldScroll = useRef(true);
+
+	useEffect(() => {
+		const scrollAmount = 1; // Adjust this value to change the scrolling speed
+		const scrollInterval = 20; // Adjust this value to change the scrolling interval (in milliseconds)
+		const scrollingList = scrollingContainerRef.current;
+		let scrollPos = 0;
+		let scrollForward = true;
+
+		const scroll = () => {
+			if (!shouldScroll.current) return;
+
+			if (scrollForward) {
+				scrollPos += scrollAmount;
+				if (
+					scrollPos + scrollingList.offsetWidth >=
+					scrollingList.scrollWidth
+				) {
+					scrollForward = false;
+				}
+			} else {
+				scrollPos -= scrollAmount;
+				if (scrollPos <= 0) {
+					scrollForward = true;
+				}
+			}
+
+			scrollingList.scrollLeft = scrollPos;
+		};
+
+		const intervalId = setInterval(scroll, scrollInterval);
+
+		const handleTouchStart = () => {
+			shouldScroll.current = false;
+			clearInterval(intervalId);
+		};
+
+		scrollingList.addEventListener("touchstart", handleTouchStart);
+
+		return () => {
+			clearInterval(intervalId);
+			scrollingList.removeEventListener("touchstart", handleTouchStart);
+		};
+	}, []);
+
 	useScrollPosition("projects_page");
 
 	const [displayedProjectsCount, setDisplayedProjectsCount] = useState(11);
@@ -132,54 +178,56 @@ const Projects = () => {
 						<div className="bar"></div>
 					</div>
 					<div className="toggle-bar">
-						{/* <div className="toggle">
+						<div className="toggle">
 							<img src={FilterIcon} alt="filter-icon" />
 							<span>Filter</span>
-						</div> */}
-						<ul>
-							<li
-								className={toggled.Commercial ? "active" : ""}
-								onClick={() => handleToggle("Commercial")}
-							>
-								Commercial
-							</li>
-							<li
-								className={toggled.Education ? "active" : ""}
-								onClick={() => handleToggle("Education")}
-							>
-								Education
-							</li>
-							<li
-								className={toggled.Government ? "active" : ""}
-								onClick={() => handleToggle("Government")}
-							>
-								Government
-							</li>
-							<li
-								className={toggled.Healthcare ? "active" : ""}
-								onClick={() => handleToggle("Healthcare")}
-							>
-								Healthcare
-							</li>
-							<li
-								className={toggled.HistoricPreservation ? "active" : ""}
-								onClick={() => handleToggle("HistoricPreservation")}
-							>
-								Historic Preservation
-							</li>
-							<li
-								className={toggled.Hospitality ? "active" : ""}
-								onClick={() => handleToggle("Hospitality")}
-							>
-								Hospitality
-							</li>
-							<li
-								className={toggled.InteriorDesign ? "active" : ""}
-								onClick={() => handleToggle("InteriorDesign")}
-							>
-								Interior Design
-							</li>
-						</ul>
+						</div>
+						<div className="scrolling-container" ref={scrollingContainerRef}>
+							<ul className="scrolling-list">
+								<li
+									className={toggled.Commercial ? "active" : ""}
+									onClick={() => handleToggle("Commercial")}
+								>
+									Commercial
+								</li>
+								<li
+									className={toggled.Education ? "active" : ""}
+									onClick={() => handleToggle("Education")}
+								>
+									Education
+								</li>
+								<li
+									className={toggled.Government ? "active" : ""}
+									onClick={() => handleToggle("Government")}
+								>
+									Government
+								</li>
+								<li
+									className={toggled.Healthcare ? "active" : ""}
+									onClick={() => handleToggle("Healthcare")}
+								>
+									Healthcare
+								</li>
+								<li
+									className={toggled.HistoricPreservation ? "active" : ""}
+									onClick={() => handleToggle("HistoricPreservation")}
+								>
+									Historic Preservation
+								</li>
+								<li
+									className={toggled.Hospitality ? "active" : ""}
+									onClick={() => handleToggle("Hospitality")}
+								>
+									Hospitality
+								</li>
+								<li
+									className={toggled.InteriorDesign ? "active" : ""}
+									onClick={() => handleToggle("InteriorDesign")}
+								>
+									Interior Design
+								</li>
+							</ul>
+						</div>
 					</div>
 					<div className={`projects-container ${projectsClass}`}>
 						{Paths &&

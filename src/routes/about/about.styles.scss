@@ -327,14 +327,13 @@ $thirds-pos: translateX(calc(-200% - 80px));
 						margin-top: 10px;
 
 						padding: 0 10px;
-						background: $yellow;
+						background: $white;
 						border-radius: $br;
 						max-height: 0;
 						overflow: hidden;
 						transition: max-height 0.3s ease-in-out;
 
 						@media (max-width: 428px) {
-							background: $white;
 							border-radius: 0;
 						}
 
@@ -414,13 +413,9 @@ $thirds-pos: translateX(calc(-200% - 80px));
 						height: 0;
 						//height: calc(100% + 30px);
 						width: 100%;
-						background: $yellow;
+						background: $white;
 						z-index: -1;
 						border-radius: $br;
-
-						@media (max-width: 428px) {
-							background: $white;
-						}
 					}
 				}
 
@@ -441,24 +436,7 @@ $thirds-pos: translateX(calc(-200% - 80px));
 					//transition-property:
 
 					@media (max-width: 768px) {
-						position: absolute;
-						width: 100%;
-						height: 388px;
-						animation: none;
-						top: 0;
-						left: 0;
-						transform: none;
-						transition: all 0.3s linear;
-						border-radius: $br;
-
-						// display: none;
-						// transform: none;
-						// animation: none;
-						// transition: none;
-					}
-
-					@media (max-width: 428px) {
-						background: $white;
+						background: white;
 					}
 				}
 

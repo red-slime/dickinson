@@ -31,6 +31,9 @@ const Header = () => {
 		};
 
 		const handleResize = () => {
+			if (window.innerWidth > 768) {
+				closeMenu();
+			}
 			setBodyStyle();
 		};
 
@@ -102,7 +105,7 @@ const Header = () => {
 									</Link>
 								</li>
 								<li>
-									<a href="javascript:;" onClick={scrollToBottom}>
+									<a href="#contact" onClick={scrollToBottom}>
 										Contact
 									</a>
 								</li>

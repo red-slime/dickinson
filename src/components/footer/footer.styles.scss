@@ -7,7 +7,7 @@
 	justify-content: center;
 
 	.footer {
-		width: $mw;
+		width: 100%;
 		max-width: $mw;
 		display: flex;
 		flex-direction: column;
@@ -95,6 +95,22 @@
 					}
 				}
 			}
+		}
+	}
+
+	.bottom-reached {
+		animation: backgroundColorChange 1s 1;
+	}
+
+	@keyframes backgroundColorChange {
+		0% {
+			background-color: $white;
+		}
+		50% {
+			background-color: $light;
+		}
+		100% {
+			background-color: $white;
 		}
 	}
 }
