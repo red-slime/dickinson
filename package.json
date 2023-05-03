@@ -1,7 +1,7 @@
 {
 	"name": "dickinson",
 	"version": "0.1.0",
-	"homepage": "https://red-slime.github.io/dickinson",
+	"homepage": "https://red-slime.github.io/",
 	"private": true,
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.16.5",
