@@ -53,7 +53,7 @@ const Projects = () => {
 
 	const [displayedProjectsCount, setDisplayedProjectsCount] = useState(11);
 	const loadMoreProjects = () => {
-		setDisplayedProjectsCount(displayedProjectsCount + 12);
+		setDisplayedProjectsCount(displayedProjectsCount + 11);
 	};
 
 	const [projectsClass, setProjectsClass] = useState("fade-in");
@@ -78,6 +78,19 @@ const Projects = () => {
 			setProjectsClass("fade-in");
 		}, 200);
 	};
+
+	const [loadButton, setLoadButton] = useState(false);
+
+	useEffect(() => {
+		const isAnyCategoryToggled = Object.values(toggled).some((val) => val);
+		if (isAnyCategoryToggled) {
+			setDisplayedProjectsCount(Infinity); // Show all projects when a category is toggled
+			setLoadButton(true);
+		} else {
+			setDisplayedProjectsCount(11); // Reset to initial count when no category is toggled
+			setLoadButton(false);
+		}
+	}, [toggled]);
 
 	let projectCount = 0;
 
@@ -236,8 +249,13 @@ const Projects = () => {
 							})}
 					</div>
 					<div className="load-more-container">
-						<div className="button-bar"></div>
-						<button onClick={loadMoreProjects} className="load-more">
+						<div
+							className={`button-bar ${loadButton ? "hide-button-bar" : ""}`}
+						></div>
+						<button
+							onClick={loadMoreProjects}
+							className={`load-more ${loadButton ? "hide-button-bar" : ""}`}
+						>
 							LOAD MORE
 						</button>
 					</div>
