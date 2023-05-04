@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dickinson/static/css/main.0efa7014.css",
-    "main.js": "/dickinson/static/js/main.52a7b837.js",
+    "main.js": "/dickinson/static/js/main.6bfa322d.js",
     "static/js/787.4005e721.chunk.js": "/dickinson/static/js/787.4005e721.chunk.js",
     "static/media/Beehive-Loop (5).jpg": "/dickinson/static/media/Beehive-Loop (5).ba4c9d94b22bbb8974f7.jpg",
     "static/media/Walton-Options (4).jpg": "/dickinson/static/media/Walton-Options (4).50b9883b0ec481f5c5b6.jpg",
@@ -301,11 +301,11 @@
     "static/media/angle-up-light.svg": "/dickinson/static/media/angle-up-light.c4f34d87468ac819292753cbcf155239.svg",
     "static/media/angle-left-light.svg": "/dickinson/static/media/angle-left-light.fe41386f9ce3dc108d1c6ad3fa272d1a.svg",
     "main.0efa7014.css.map": "/dickinson/static/css/main.0efa7014.css.map",
-    "main.52a7b837.js.map": "/dickinson/static/js/main.52a7b837.js.map",
+    "main.6bfa322d.js.map": "/dickinson/static/js/main.6bfa322d.js.map",
     "787.4005e721.chunk.js.map": "/dickinson/static/js/787.4005e721.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0efa7014.css",
-    "static/js/main.52a7b837.js"
+    "static/js/main.6bfa322d.js"
   ]
 }
