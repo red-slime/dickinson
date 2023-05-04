@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
+import usePageTransition from "../../transition.js";
 import FeaturedList from "../../components/featured-list/featured-list.component";
 import "./home.styles.scss";
 
 const Home = () => {
+	const transitionStyles = usePageTransition(300);
 	return (
 		<div className="home-component-container">
-			<div className="home">
+			<div className="home" style={transitionStyles}>
 				<section className="home-one">
 					<div className="mobile-splash"></div>
 					<div className="splash">

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback, memo } from "react";
+import usePageTransition from "../../transition.js";
 import "./about.styles.scss";
 import x from "../../assets/icons/xmark-large-solid.svg";
 
@@ -207,6 +208,8 @@ const members = [
 const videoSrc = "https://i.imgur.com/bWGuz3C.mp4#t=17";
 
 const About = () => {
+	const transitionStyles = usePageTransition(300);
+
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
@@ -248,7 +251,7 @@ const About = () => {
 	return (
 		<div className="about-component-container">
 			<div className="GrayFox"></div>
-			<div className="about">
+			<div className="about" style={transitionStyles}>
 				<section className="intro">
 					<div className="text">
 						<p>

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Paths from "./paths.json";
 import { Link, useLocation } from "react-router-dom";
 import FilterIcon from "../../assets/icons/filter-list-regular.svg";
+import usePageTransition from "../../transition.js";
 import "./projects.styles.scss";
 
 // Remember scroll position
@@ -65,6 +66,8 @@ const imageContexts = {
 };
 
 const Projects = () => {
+	const transitionStyles = usePageTransition(300);
+
 	const [displayedProjectsCount, setDisplayedProjectsCount] = useState(0);
 	const loadMoreProjects = () => {
 		setDisplayedProjectsCount(displayedProjectsCount + 11);
@@ -191,7 +194,7 @@ const Projects = () => {
 
 	return (
 		<div className="projects-component-container">
-			<div className="work">
+			<div className="work" style={transitionStyles}>
 				<section className="intro">
 					<div className="text">
 						<p>

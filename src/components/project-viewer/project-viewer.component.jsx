@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect, useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useSwipeable } from "react-swipeable";
+import usePageTransition from "../../transition.js";
 import Paths from "../../routes/projects/paths.json";
 import AngleDown from "../../assets/icons/angle-down-light.svg";
 import AngleUp from "../../assets/icons/angle-up-light.svg";
@@ -72,6 +73,7 @@ const Image = React.memo(({ src, alt, isActive, onClick }) => (
 ));
 
 const ProjectViewer = () => {
+	const transitionStyles = usePageTransition(300);
 	const [featuredClass, setFeaturedClass] = useState("fade-in-right");
 
 	const { directory } = useParams();
@@ -187,7 +189,7 @@ const ProjectViewer = () => {
 
 	return (
 		<div className="project-viewer-container">
-			<div className="project">
+			<div className="project" style={transitionStyles}>
 				<div className="carousel">
 					<div
 						className="featured"
