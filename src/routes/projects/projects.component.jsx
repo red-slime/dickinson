@@ -64,7 +64,7 @@ const Projects = () => {
 
 	useEffect(() => {
 		const scrollAmount = 1; // Adjust this value to change the scrolling speed
-		const scrollInterval = 20; // Adjust this value to change the scrolling interval (in milliseconds)
+		const scrollInterval = 40; // Adjust this value to change the scrolling interval (in milliseconds)
 		const scrollingList = scrollingContainerRef.current;
 		let scrollPos = 0;
 		let scrollForward = true;

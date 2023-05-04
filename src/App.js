@@ -11,6 +11,7 @@ import ProjectViewer from "./components/project-viewer/project-viewer.component"
 import Home from "./routes/home/home.component";
 import Projects from "./routes/projects/projects.component";
 import About from "./routes/about/about.component";
+import NoPage from "./components/404/404.component";
 
 const App = () => {
 	return (
@@ -19,8 +20,10 @@ const App = () => {
 			<Routes>
 				<Route index element={<Home />} />
 				<Route path="projects" element={<Projects />} />
+
 				<Route path="/projects/:directory" element={<ProjectViewer />} />
 				<Route path="about" element={<About />} />
+				<Route path="*" element={<NoPage />} />
 			</Routes>
 			<Outlet />
 			<Footer />
