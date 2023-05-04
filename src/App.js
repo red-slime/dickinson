@@ -18,7 +18,7 @@ const App = () => {
 		<Router>
 			<Header />
 			<Routes>
-				<Route path="dickinson" element={<Home />} index />
+				<Route path="/" element={<Home />} index />
 				<Route path="projects" element={<Projects />} />
 				<Route path="/projects/:directory" element={<ProjectViewer />} />
 				<Route path="about" element={<About />} />
