@@ -66,7 +66,7 @@ const Header = () => {
 			<div className="header-container">
 				<div className="header">
 					<div className="logo-container">
-						<Link to="/">
+						<Link to="/dickinson">
 							<img
 								className="desktop"
 								src={Logo}

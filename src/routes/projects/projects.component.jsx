@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Paths from "./paths.json";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import FilterIcon from "../../assets/icons/filter-list-regular.svg";
 import "./projects.styles.scss";
 
@@ -10,6 +10,12 @@ const useScrollPosition = (key) => {
 		const storedScrollPosition = parseInt(localStorage.getItem(key));
 
 		if (!isNaN(storedScrollPosition)) {
+			setTimeout(() => {
+				window.scrollTo(0, storedScrollPosition);
+			}, 0);
+		}
+
+		if (!isNaN(storedScrollPosition)) {
 			window.scrollTo(0, storedScrollPosition);
 		}
 
@@ -17,10 +23,10 @@ const useScrollPosition = (key) => {
 			localStorage.setItem(key, window.scrollY);
 		};
 
-		window.addEventListener("scroll", handleScroll);
+		window.addEventListener("wheel", handleScroll);
 
 		return () => {
-			window.removeEventListener("scroll", handleScroll);
+			window.removeEventListener("wheel", handleScroll);
 		};
 	}, [key]);
 };
@@ -59,10 +65,31 @@ const imageContexts = {
 };
 
 const Projects = () => {
+	const [displayedProjectsCount, setDisplayedProjectsCount] = useState(0);
+	const loadMoreProjects = () => {
+		setDisplayedProjectsCount(displayedProjectsCount + 11);
+	};
+
+	const location = useLocation();
+	useEffect(() => {
+		const previousPath = document.referrer;
+
+		if (previousPath.endsWith("/")) {
+			// Run your function here, as the user is navigating from the Home page
+			window.scrollTo({
+				top: 0,
+				behavior: "smooth", // Optional, for smooth scrolling
+			});
+		}
+	}, [location]);
+
 	const scrollingContainerRef = useRef();
 	const shouldScroll = useRef(true);
 
 	useEffect(() => {
+		if (window.innerWidth > 430) {
+			return;
+		}
 		const scrollAmount = 1; // Adjust this value to change the scrolling speed
 		const scrollInterval = 40; // Adjust this value to change the scrolling interval (in milliseconds)
 		const scrollingList = scrollingContainerRef.current;
@@ -107,22 +134,26 @@ const Projects = () => {
 
 	useScrollPosition("projects_page");
 
-	const [displayedProjectsCount, setDisplayedProjectsCount] = useState(11);
-	const loadMoreProjects = () => {
-		setDisplayedProjectsCount(displayedProjectsCount + 11);
-	};
-
 	const [projectsClass, setProjectsClass] = useState("fade-in");
 
-	const [toggled, setToggled] = useState({
-		Healthcare: false,
-		Government: false,
-		Commercial: false,
-		Education: false,
-		HistoricPreservation: false,
-		Hospitality: false,
-		InteriorDesign: false,
+	const [toggled, setToggled] = useState(() => {
+		const storedToggled = localStorage.getItem("toggled");
+		return storedToggled
+			? JSON.parse(storedToggled)
+			: {
+					Healthcare: false,
+					Government: false,
+					Commercial: false,
+					Education: false,
+					HistoricPreservation: false,
+					Hospitality: false,
+					InteriorDesign: false,
+			  };
 	});
+
+	useEffect(() => {
+		localStorage.setItem("toggled", JSON.stringify(toggled));
+	}, [toggled]);
 
 	const handleToggle = (cat) => {
 		setProjectsClass("fade-out");
@@ -137,9 +168,12 @@ const Projects = () => {
 
 	const [loadButton, setLoadButton] = useState(false);
 
+	const [isAnyCategoryToggled, setIsAnyCategoryToggled] = useState(false);
+
 	useEffect(() => {
-		const isAnyCategoryToggled = Object.values(toggled).some((val) => val);
-		if (isAnyCategoryToggled) {
+		const anyCategoryToggled = Object.values(toggled).some((val) => val);
+		setIsAnyCategoryToggled(anyCategoryToggled);
+		if (anyCategoryToggled) {
 			setDisplayedProjectsCount(Infinity); // Show all projects when a category is toggled
 			setLoadButton(true);
 		} else {
@@ -149,6 +183,7 @@ const Projects = () => {
 	}, [toggled]);
 
 	let projectCount = 0;
+	let totalProjectsCount = 0;
 
 	//
 	// Return
@@ -241,7 +276,7 @@ const Projects = () => {
 					</div>
 					<div className={`projects-container ${projectsClass}`}>
 						{Paths &&
-							Paths.map((category, categoryIndex) => {
+							Paths.map((category) => {
 								return Object.entries(category).map(([key, items]) => {
 									items.sort(
 										(a, b) =>
@@ -249,6 +284,7 @@ const Projects = () => {
 									);
 									return items.map((item) => {
 										projectCount++;
+										totalProjectsCount++;
 
 										if (projectCount <= displayedProjectsCount) {
 											const imageSrc = imageContexts[key](
@@ -262,7 +298,7 @@ const Projects = () => {
 														!Object.values(toggled).some((val) => val)
 															? ""
 															: "hidden"
-													} `}
+													} ${isAnyCategoryToggled ? "toggled-span" : ""}`}
 													key={item.id}
 												>
 													<Link
@@ -308,11 +344,19 @@ const Projects = () => {
 					</div>
 					<div className="load-more-container">
 						<div
-							className={`button-bar ${loadButton ? "hide-button-bar" : ""}`}
+							className={`button-bar ${loadButton ? "hide-button-bar" : ""} ${
+								displayedProjectsCount >= totalProjectsCount
+									? "hide-button-bar"
+									: ""
+							}`}
 						></div>
 						<button
 							onClick={loadMoreProjects}
-							className={`load-more ${loadButton ? "hide-button-bar" : ""}`}
+							className={`load-more ${loadButton ? "hide-button-bar" : ""} ${
+								displayedProjectsCount >= totalProjectsCount
+									? "hide-button-bar"
+									: ""
+							}`}
 						>
 							LOAD MORE
 						</button>

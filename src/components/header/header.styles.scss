@@ -22,12 +22,12 @@
 
 		padding-top: calc($pad-tb + 40px);
 
-		@media (max-width: 1500px) and (min-width: 429px) {
+		@media (max-width: 1500px) and (min-width: 431px) {
 			padding-left: 40px;
 			padding-right: 40px;
 		}
 
-		@media (max-width: 428px) {
+		@media (max-width: 430px) {
 			padding-top: $pad-tb;
 		}
 	}

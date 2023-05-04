@@ -24,7 +24,7 @@
 			height: 200px;
 		}
 
-		@media (max-width: 428px) {
+		@media (max-width: 430px) {
 			height: 180px;
 		}
 
@@ -48,7 +48,7 @@
 			visibility: hidden;
 			transition: none;
 
-			@media (max-width: 428px) {
+			@media (max-width: 430px) {
 				// font-size: 8px;
 				// padding: 8px 18px;
 				display: none;
@@ -69,7 +69,7 @@
 			font-size: $p3;
 		}
 
-		@media (max-width: 428px) {
+		@media (max-width: 430px) {
 			font-size: $p4;
 		}
 	}
@@ -114,7 +114,7 @@
 			background-size: 30px;
 			transform: translateY(-20px);
 			transition: all 0.1s linear;
-			@media (max-width: 428px) {
+			@media (max-width: 430px) {
 				font-size: $p3;
 				background-size: 20px;
 				height: 80px;
@@ -124,6 +124,10 @@
 
 	.category:hover button::after {
 		letter-spacing: 3px;
+
+		@media (max-width: 430px) {
+			letter-spacing: 2px;
+		}
 	}
 
 	.category::before {
@@ -142,7 +146,7 @@
 }
 
 .category-component-container:last-child .category > button {
-	@media (max-width: 428px) {
+	@media (max-width: 430px) {
 		display: initial;
 	}
 }

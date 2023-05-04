@@ -204,7 +204,7 @@ const members = [
 	},
 ];
 
-const videoSrc = "https://i.imgur.com/bWGuz3C.mp4#t=2";
+const videoSrc = "https://i.imgur.com/bWGuz3C.mp4#t=17";
 
 const About = () => {
 	useEffect(() => {
