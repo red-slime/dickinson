@@ -1,12 +1,13 @@
 @import "../../global-styles";
 
-$random0: random;
-$random: calc($random0 * 0.1) + px;
-
 // .individual width variables
 $thirds: calc(33.33% - (80px / 3));
 $halves: calc(50% - (40px / 2));
 $thirds-pos: translateX(calc(-200% - 80px));
+
+.about-component-container * {
+	transition: all 0.2s linear;
+}
 
 .about-component-container {
 	display: flex;
@@ -20,12 +21,29 @@ $thirds-pos: translateX(calc(-200% - 80px));
 		width: 100%;
 		background: $light;
 		z-index: -1;
+
+		@media (max-width: 960px) {
+			height: 120%;
+		}
+
+		@media (max-width: 768px) {
+			height: 105%;
+		}
+
+		@media (max-width: 428px) {
+			height: 80%;
+		}
 	}
 
 	.about {
 		width: 100%;
 		max-width: $mw;
 		padding: $pad;
+
+		@media (max-width: 1500px) and (min-width: 429px) {
+			padding-left: 40px;
+			padding-right: 40px;
+		}
 
 		section {
 			margin-bottom: $spacer;
@@ -43,32 +61,40 @@ $thirds-pos: translateX(calc(-200% - 80px));
 				position: relative;
 				width: 40%;
 				height: auto;
-				border-radius: $br;
-				background: $white;
-				overflow: hidden;
-
-				&::before {
-					content: "";
-					position: absolute;
-					top: 0;
-					left: 0;
-					height: 100%;
-					width: calc(100% + 2px);
-					background: red;
-					border-radius: $br;
-					transform: translate(2px, 6px);
-					z-index: -1;
-				}
+				// border-radius: $br;
+				// background: $white;
+				// overflow: hidden;
 
 				.video-container {
 					width: 100%;
-					height: auto;
+					//height: auto;
+					height: 0;
+					padding-top: 56.25%;
 					border-radius: $br;
-					overflow: hidden;
+					position: relative;
+					//overflow: hidden;
+
+					&::before {
+						content: "";
+						position: absolute;
+						top: 0;
+						left: 0;
+						height: 100%;
+						width: calc(100% + 2px);
+						background: $yellow;
+						border-radius: $br;
+						transform: translate(2px, 6px);
+						z-index: -1;
+					}
 
 					video {
 						width: 100%;
-						max-height: 172px;
+						height: 100%;
+						position: absolute;
+						top: 0;
+						left: 0;
+						border-radius: $br;
+						//max-height: 172px;
 					}
 				}
 			}
@@ -146,7 +172,7 @@ $thirds-pos: translateX(calc(-200% - 80px));
 					grid-gap: 80px 30px;
 				}
 
-				@media (max-width: 768px) {
+				@media (max-width: 900px) {
 					grid-template-columns: 1fr 1fr;
 					grid-gap: 80px 30px;
 				}
@@ -162,6 +188,16 @@ $thirds-pos: translateX(calc(-200% - 80px));
 					flex-direction: column;
 					cursor: pointer;
 					height: auto;
+
+					// &:nth-of-type(3) .member-photo img {
+					// 	object-position: 100% 100%;
+					// }
+
+					&:nth-of-type(7) .member-photo img {
+						@media (max-width: 640px) {
+							object-position: 50% 30%;
+						}
+					}
 
 					@media (max-width: 768px) {
 						cursor: pointer;
@@ -365,11 +401,8 @@ $thirds-pos: translateX(calc(-200% - 80px));
 								max-height: 480px;
 							}
 
-							@media (max-width: 768px) {
+							@media (max-width: 900px) {
 								object-position: 50% 15%;
-							}
-
-							@media (max-width: 768px) {
 								height: 388px;
 							}
 
@@ -461,17 +494,6 @@ $thirds-pos: translateX(calc(-200% - 80px));
 					@media (max-width: 768px) {
 						height: calc(100% + 35px);
 						transition: height 0.1s linear;
-					}
-				}
-
-				@-webkit-keyframes move {
-					from {
-						border-radius: $random $random $random $random / $random $random
-							$random $random;
-					}
-
-					to {
-						border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
 					}
 				}
 

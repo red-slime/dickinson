@@ -204,7 +204,7 @@ const members = [
 	},
 ];
 
-const videoSrc = "https://i.imgur.com/R87m7Hf.mp4";
+const videoSrc = "https://i.imgur.com/bWGuz3C.mp4#t=2";
 
 const About = () => {
 	useEffect(() => {
@@ -264,7 +264,7 @@ const About = () => {
 					<div className="video">
 						<div className="video-container">
 							<video controls>
-								<source src={videoSrc} type="video/mp4" />
+								<source src={videoSrc} type="video/mp4" preload="metadata" />
 								Your browser does not support the video tag.
 							</video>
 						</div>

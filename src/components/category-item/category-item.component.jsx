@@ -5,13 +5,14 @@ const CategoryItem = ({ category }) => {
 	const { imageUrl, title, projectUrl } = category;
 	return (
 		<div className="category-component-container">
-			<div className="category">
-				<img src={imageUrl} alt={title} />
-				<Link to={`projects/${projectUrl}`}>
+			<Link to={`projects/${projectUrl}`}>
+				<div className="category">
+					<img src={imageUrl} alt={title} />
+
 					<button>View Project</button>
-				</Link>
-			</div>
-			<h2>{title}</h2>
+				</div>
+				<h2>{title}</h2>
+			</Link>
 		</div>
 	);
 };

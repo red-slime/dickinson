@@ -1,5 +1,9 @@
 @import "../../global-styles";
 
+.header-container * {
+	transition: all 0.2s linear;
+}
+
 .header-container {
 	position: relative;
 	width: 100%;
@@ -8,14 +12,20 @@
 	justify-content: center;
 
 	.header {
-		width: $mw;
+		width: 100%;
 		max-width: $mw;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
 		padding: $pad;
+
 		padding-top: calc($pad-tb + 40px);
+
+		@media (max-width: 1500px) and (min-width: 429px) {
+			padding-left: 40px;
+			padding-right: 40px;
+		}
 
 		@media (max-width: 428px) {
 			padding-top: $pad-tb;
@@ -27,12 +37,11 @@
 		flex-shrink: 0;
 		max-width: 440px;
 
-		// @media (max-width: 1060px) {
-		// 	max-width: 500px;
-		// }
-
 		@media (max-width: 920px) {
 			max-width: 400px;
+			flex-shrink: 1;
+			flex-grow: 0;
+			margin-right: 60px;
 		}
 
 		@media (max-width: 768px) {

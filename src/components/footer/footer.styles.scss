@@ -1,5 +1,9 @@
 @import "../../global-styles";
 
+.footer-container * {
+	transition: all 0.2s linear;
+}
+
 .footer-container {
 	width: 100%;
 	background: $clear;
@@ -13,6 +17,11 @@
 		flex-direction: column;
 		padding: $pad;
 		padding-bottom: calc($pad-tb + 40px);
+
+		@media (max-width: 1500px) and (min-width: 429px) {
+			padding-left: 40px;
+			padding-right: 40px;
+		}
 
 		.bar {
 			height: 2px;

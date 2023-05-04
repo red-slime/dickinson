@@ -1,24 +1,23 @@
 @import "../../global-styles";
 
-/*
-	>> WHENEVER category is clicked
-	(check to see if length of projects has changed)
-	>> Begin timer
-	>> apply class
-
-*/
+.projects-component-container * {
+	transition: all 0.2s linear;
+}
 
 .projects-component-container {
 	display: flex;
 	justify-content: center;
-	//overflow-x: hidden;
 
 	.work {
-		//width: $mw;
 		width: 100%;
 		max-width: $mw;
 		padding: $pad;
 		padding-bottom: 0;
+
+		@media (max-width: 1500px) and (min-width: 429px) {
+			padding-left: 40px;
+			padding-right: 40px;
+		}
 
 		section {
 			margin-bottom: $spacer;
@@ -110,7 +109,11 @@
 					display: inline;
 
 					@media (max-width: 960px) {
-						font-size: $h-ms;
+						font-size: 40px;
+					}
+
+					@media (max-width: 640px) {
+						font-size: 30px;
 					}
 
 					@media (max-width: 390px) {
@@ -121,24 +124,6 @@
 						font-size: 26px;
 					}
 				}
-
-				// h3::before {
-				// 	@media (max-width: 960px) {
-				// 		content: "";
-				// 		position: absolute;
-				// 		bottom: 1px;
-				// 		left: 0;
-				// 		width: 100%;
-				// 		height: 50%;
-				// 		background: $yellow;
-				// 		z-index: -1;
-				// 		transform: skewX(10deg);
-
-				// 		@media (max-width: 480px) {
-				// 			width: 50%;
-				// 		}
-				// 	}
-				// }
 
 				.better-mobile {
 					display: none;
@@ -165,7 +150,7 @@
 				font-size: $h-med;
 
 				@media (max-width: 640px) {
-					font-size: 32px;
+					font-size: 30px;
 				}
 
 				@media (max-width: 428px) {
@@ -345,7 +330,7 @@
 				grid-gap: 60px 25px;
 			}
 
-			@media (max-width: 428px) {
+			@media (max-width: 450px) {
 				grid-template-columns: 1fr;
 				grid-gap: 50px 25px;
 			}
@@ -395,11 +380,15 @@
 							max-height: 350px;
 						}
 
-						@media (max-width: 572px) {
+						@media (max-width: 730px) {
+							max-height: 300px;
+						}
+
+						@media (max-width: 630px) {
 							max-height: 250px;
 						}
 
-						@media (max-width: 460px) {
+						@media (max-width: 540px) {
 							max-height: 200px;
 						}
 
@@ -420,7 +409,6 @@
 							top: 50%;
 							left: 50%;
 							transform: translate(-50%, -50%);
-							//width: 170px;
 							width: auto;
 							border: #fff;
 							display: none;
