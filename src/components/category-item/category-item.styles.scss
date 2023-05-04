@@ -46,6 +46,7 @@
 			background: $white;
 			border-color: $white;
 			visibility: hidden;
+			transition: none;
 
 			@media (max-width: 428px) {
 				// font-size: 8px;
@@ -112,12 +113,17 @@
 			background-position: center bottom;
 			background-size: 30px;
 			transform: translateY(-20px);
+			transition: all 0.1s linear;
 			@media (max-width: 428px) {
 				font-size: $p3;
 				background-size: 20px;
 				height: 80px;
 			}
 		}
+	}
+
+	.category:hover button::after {
+		letter-spacing: 3px;
 	}
 
 	.category::before {

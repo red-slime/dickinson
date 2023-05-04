@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect, useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
+import { useSwipeable } from "react-swipeable";
 import Paths from "../../routes/projects/paths.json";
 import AngleDown from "../../assets/icons/angle-down-light.svg";
 import AngleUp from "../../assets/icons/angle-up-light.svg";
@@ -125,7 +126,7 @@ const ProjectViewer = () => {
 	const handlePrevImage = () => {
 		const currentIndex = images.findIndex((src) => src === featuredSrc);
 		const prevIndex = (currentIndex - 1 + images.length) % images.length;
-		// setFeaturedSrc(images[prevIndex]);
+
 		setActiveImg(prevIndex);
 		setFeaturedClass("fade-out-left");
 		setTimeout(() => {
@@ -137,7 +138,7 @@ const ProjectViewer = () => {
 	const handleNextImage = () => {
 		const currentIndex = images.findIndex((src) => src === featuredSrc);
 		const nextIndex = (currentIndex + 1) % images.length;
-		// setFeaturedSrc(images[nextIndex]);
+
 		setActiveImg(nextIndex);
 		setFeaturedClass("fade-out-right");
 		setTimeout(() => {
@@ -147,7 +148,6 @@ const ProjectViewer = () => {
 	};
 
 	const handleSetActiveImage = (imageSrc, index) => () => {
-		// setFeaturedSrc(imageSrc);
 		setActiveImg(index);
 		setFeaturedClass("fade-out-right");
 		setTimeout(() => {
@@ -156,13 +156,13 @@ const ProjectViewer = () => {
 		}, 200);
 	};
 
-	// const handleToggle = (cat) => {
-	// 	setFeaturedClass("fade-out-right");
-	// 	setTimeout(() => {
-	// 		setFeaturedSrc(imageSrc);
-	// 		setProjectsClass("fade-in-right");
-	// 	}, 200);
-	// };
+	const swipeHandlers = useSwipeable({
+		onSwipedLeft: () => handlePrevImage(),
+		onSwipedRight: () => handleNextImage(),
+		preventDefaultTouchmoveEvent: true,
+		trackMouse: false,
+		trackTouch: true,
+	});
 
 	useEffect(() => {
 		window.scrollTo({
@@ -190,7 +190,12 @@ const ProjectViewer = () => {
 						>
 							<img src={AngleLeft} alt="carousel-left-arrow" />
 						</div>
-						<img src={featuredSrc} alt={featuredSrc} class={featuredClass} />
+						<img
+							src={featuredSrc}
+							alt={featuredSrc}
+							className={featuredClass}
+							{...swipeHandlers}
+						/>
 						<div
 							className="arrow-container arrow-container-right"
 							onClick={handleNextImage}
@@ -267,45 +272,3 @@ const ProjectViewer = () => {
 };
 
 export default ProjectViewer;
-
-/*
-import React, { useState, useRef } from "react";
-
-function DragComponent() {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const elementRef = useRef(null);
-
-  const handleMouseDown = (event) => {
-    const startX = event.clientX - position.x;
-    const startY = event.clientY - position.y;
-
-    const handleMouseMove = (event) => {
-      setPosition({
-        x: event.clientX - startX,
-        y: event.clientY - startY,
-      });
-    };
-
-    document.addEventListener("mousemove", handleMouseMove);
-
-    document.addEventListener("mouseup", () => {
-      document.removeEventListener("mousemove", handleMouseMove);
-    });
-  };
-
-  return (
-    <div
-      ref={elementRef}
-      style={{
-        transform: `translate(${position.x}px, ${position.y}px)`,
-        cursor: "grab",
-      }}
-      onMouseDown={handleMouseDown}
-    >
-      Drag me
-    </div>
-  );
-}
-
-export default DragComponent;
-*/
