@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dickinson/static/css/main.00d1e5e0.css",
-    "main.js": "/dickinson/static/js/main.129bda1b.js",
+    "main.css": "/dickinson/static/css/main.37b8dacc.css",
+    "main.js": "/dickinson/static/js/main.9288f716.js",
     "static/js/787.4005e721.chunk.js": "/dickinson/static/js/787.4005e721.chunk.js",
     "static/media/Beehive-Loop (5).jpg": "/dickinson/static/media/Beehive-Loop (5).ba4c9d94b22bbb8974f7.jpg",
     "static/media/Walton-Options (4).jpg": "/dickinson/static/media/Walton-Options (4).50b9883b0ec481f5c5b6.jpg",
@@ -300,12 +300,12 @@
     "static/media/angle-down-light.svg": "/dickinson/static/media/angle-down-light.6ab186f5464f6cf0e58c657ba37f9cf1.svg",
     "static/media/angle-up-light.svg": "/dickinson/static/media/angle-up-light.c4f34d87468ac819292753cbcf155239.svg",
     "static/media/angle-left-light.svg": "/dickinson/static/media/angle-left-light.fe41386f9ce3dc108d1c6ad3fa272d1a.svg",
-    "main.00d1e5e0.css.map": "/dickinson/static/css/main.00d1e5e0.css.map",
-    "main.129bda1b.js.map": "/dickinson/static/js/main.129bda1b.js.map",
+    "main.37b8dacc.css.map": "/dickinson/static/css/main.37b8dacc.css.map",
+    "main.9288f716.js.map": "/dickinson/static/js/main.9288f716.js.map",
     "787.4005e721.chunk.js.map": "/dickinson/static/js/787.4005e721.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.00d1e5e0.css",
-    "static/js/main.129bda1b.js"
+    "static/css/main.37b8dacc.css",
+    "static/js/main.9288f716.js"
   ]
 }
