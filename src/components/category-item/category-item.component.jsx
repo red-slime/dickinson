@@ -5,7 +5,7 @@ const CategoryItem = ({ category }) => {
 	const { imageUrl, title, projectUrl } = category;
 	return (
 		<div className="category-component-container">
-			<Link to={`projects/${projectUrl}`}>
+			<Link to={`../projects/${projectUrl}`}>
 				<div className="category">
 					<img src={imageUrl} alt={title} />
 
