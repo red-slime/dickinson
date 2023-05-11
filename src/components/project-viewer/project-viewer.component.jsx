@@ -1,4 +1,10 @@
-import React, { useState, useRef, useEffect, useMemo } from "react";
+import React, {
+	useState,
+	useRef,
+	useEffect,
+	useCallback,
+	useMemo,
+} from "react";
 import { Link, useParams } from "react-router-dom";
 import { useSwipeable } from "react-swipeable";
 import usePageTransition from "../../transition.js";
@@ -61,7 +67,11 @@ const loadImages = (directory) => {
 	return images;
 };
 
-const allProjects = Paths.flatMap((category) => Object.values(category).flat());
+const allProjects = Paths.flatMap((category) =>
+	Object.values(category)
+		.flat()
+		.sort((a, b) => new Date(b.completionDate) - new Date(a.completionDate))
+);
 
 const Image = React.memo(({ src, alt, isActive, onClick }) => (
 	<img
@@ -71,6 +81,9 @@ const Image = React.memo(({ src, alt, isActive, onClick }) => (
 		onClick={onClick}
 	/>
 ));
+
+const calculateNextIndex = (currentIndex, delta, length) =>
+	(currentIndex + delta + length) % length;
 
 const ProjectViewer = () => {
 	const transitionStyles = usePageTransition(300);
@@ -129,44 +142,67 @@ const ProjectViewer = () => {
 		collectionScroll.current.scrollTop = 0;
 	};
 
+	const [loadedImages, setLoadedImages] = useState([]);
+
+	useEffect(() => {
+		const loadImagesAndUpdateState = () => {
+			const newImages = loadImages(directory);
+			setLoadedImages(newImages); // assuming you've stored images in a state variable
+			setFeaturedSrc(newImages[0]);
+			setActiveImg(0);
+		};
+		loadImagesAndUpdateState();
+		window.scrollTo({
+			top: 150,
+			behavior: "smooth",
+		});
+	}, [directory]);
+
 	const handleNext = () => {
 		const nextImages = loadImages(nextProject.directory);
 		setFeaturedSrc(nextImages[0]);
 		setActiveImg(0);
 	};
 
-	const handlePrevImage = () => {
-		const currentIndex = images.findIndex((src) => src === featuredSrc);
-		const prevIndex = (currentIndex - 1 + images.length) % images.length;
+	const handleImageChange = useCallback(
+		(delta) => {
+			const currentIndex = images.findIndex((src) => src === featuredSrc);
+			const nextIndex = calculateNextIndex(currentIndex, delta, images.length);
 
-		setActiveImg(prevIndex);
-		setFeaturedClass("fade-out-left");
-		setTimeout(() => {
-			setFeaturedSrc(images[prevIndex]);
-			setFeaturedClass("fade-in-left");
-		}, 200);
-	};
+			setActiveImg(nextIndex);
+			setFeaturedClass(delta > 0 ? "fade-out-right" : "fade-out-left");
+			setTimeout(() => {
+				setFeaturedSrc(images[nextIndex]);
+				setFeaturedClass(delta > 0 ? "fade-in-right" : "fade-in-left");
+			}, 200);
+		},
+		[images, featuredSrc]
+	);
 
-	const handleNextImage = () => {
-		const currentIndex = images.findIndex((src) => src === featuredSrc);
-		const nextIndex = (currentIndex + 1) % images.length;
+	const handleNextImage = useCallback(
+		() => handleImageChange(1),
+		[handleImageChange]
+	);
+	const handlePrevImage = useCallback(
+		() => handleImageChange(-1),
+		[handleImageChange]
+	);
+	const handleSetActiveImage = useCallback(
+		(imageSrc, index) => () => {
+			setActiveImg(index);
+			setFeaturedClass("fade-out-right");
+			setTimeout(() => {
+				setFeaturedSrc(imageSrc);
+				setFeaturedClass("fade-in-right");
+			}, 200);
+		},
+		[]
+	);
 
-		setActiveImg(nextIndex);
-		setFeaturedClass("fade-out-right");
-		setTimeout(() => {
-			setFeaturedSrc(images[nextIndex]);
-			setFeaturedClass("fade-in-right");
-		}, 200);
-	};
-
-	const handleSetActiveImage = (imageSrc, index) => () => {
-		setActiveImg(index);
-		setFeaturedClass("fade-out-right");
-		setTimeout(() => {
-			setFeaturedSrc(imageSrc);
-			setFeaturedClass("fade-in-right");
-		}, 200);
-	};
+	const nextProjectDirectory = useMemo(
+		() => nextProject.directory,
+		[nextProject]
+	);
 
 	const swipeHandlers = useSwipeable({
 		onSwipedLeft: () => handlePrevImage(),
@@ -175,17 +211,6 @@ const ProjectViewer = () => {
 		trackMouse: false,
 		trackTouch: true,
 	});
-
-	useEffect(() => {
-		window.scrollTo({
-			top: 150,
-			behavior: "smooth",
-		});
-	}, [project]);
-
-	if (!project) {
-		return <div>Project not found.</div>;
-	}
 
 	return (
 		<div className="project-viewer-container">
@@ -251,7 +276,9 @@ const ProjectViewer = () => {
 					<span>{project.categoryStringTwo}</span>
 					<p className="project-description">{project.description}</p>
 					<p>Completion Date: {project.completionDate}</p>
-					<p>Square Footage: {project.squareFootage}</p>
+					{project.squareFootage && (
+						<p>Square Footage: {project.squareFootage}</p>
+					)}
 				</div>
 			</div>
 
@@ -265,7 +292,7 @@ const ProjectViewer = () => {
 							<span>All</span>
 						</button>
 					</Link>
-					<Link to={`/projects/${nextProject.directory}`}>
+					<Link to={`/projects/${nextProjectDirectory}`}>
 						<button
 							onClick={() => {
 								handleNext();

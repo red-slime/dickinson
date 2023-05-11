@@ -141,17 +141,7 @@ const Projects = () => {
 
 	const [toggled, setToggled] = useState(() => {
 		const storedToggled = localStorage.getItem("toggled");
-		return storedToggled
-			? JSON.parse(storedToggled)
-			: {
-					Healthcare: false,
-					Government: false,
-					Commercial: false,
-					Education: false,
-					HistoricPreservation: false,
-					Hospitality: false,
-					InteriorDesign: false,
-			  };
+		return storedToggled ? JSON.parse(storedToggled) : null;
 	});
 
 	useEffect(() => {
@@ -161,10 +151,7 @@ const Projects = () => {
 	const handleToggle = (cat) => {
 		setProjectsClass("fade-out");
 		setTimeout(() => {
-			setToggled((prevState) => ({
-				...prevState,
-				[cat]: !prevState[cat],
-			}));
+			setToggled((prevToggled) => (prevToggled === cat ? null : cat));
 			setProjectsClass("fade-in");
 		}, 200);
 	};
@@ -174,7 +161,7 @@ const Projects = () => {
 	const [isAnyCategoryToggled, setIsAnyCategoryToggled] = useState(false);
 
 	useEffect(() => {
-		const anyCategoryToggled = Object.values(toggled).some((val) => val);
+		const anyCategoryToggled = !!toggled;
 		setIsAnyCategoryToggled(anyCategoryToggled);
 		if (anyCategoryToggled) {
 			setDisplayedProjectsCount(Infinity); // Show all projects when a category is toggled
@@ -233,43 +220,43 @@ const Projects = () => {
 						<div className="scrolling-container" ref={scrollingContainerRef}>
 							<ul className="scrolling-list">
 								<li
-									className={toggled.Commercial ? "active" : ""}
+									className={toggled === "Commercial" ? "active" : ""}
 									onClick={() => handleToggle("Commercial")}
 								>
 									Commercial
 								</li>
 								<li
-									className={toggled.Education ? "active" : ""}
+									className={toggled === "Education" ? "active" : ""}
 									onClick={() => handleToggle("Education")}
 								>
 									Education
 								</li>
 								<li
-									className={toggled.Government ? "active" : ""}
+									className={toggled === "Government" ? "active" : ""}
 									onClick={() => handleToggle("Government")}
 								>
 									Government
 								</li>
 								<li
-									className={toggled.Healthcare ? "active" : ""}
+									className={toggled === "Healthcare" ? "active" : ""}
 									onClick={() => handleToggle("Healthcare")}
 								>
 									Healthcare
 								</li>
 								<li
-									className={toggled.HistoricPreservation ? "active" : ""}
+									className={toggled === "HistoricPreservation" ? "active" : ""}
 									onClick={() => handleToggle("HistoricPreservation")}
 								>
 									Historic Preservation
 								</li>
 								<li
-									className={toggled.Hospitality ? "active" : ""}
+									className={toggled === "Hospitality" ? "active" : ""}
 									onClick={() => handleToggle("Hospitality")}
 								>
 									Hospitality
 								</li>
 								<li
-									className={toggled.InteriorDesign ? "active" : ""}
+									className={toggled === "InteriorDesign" ? "active" : ""}
 									onClick={() => handleToggle("InteriorDesign")}
 								>
 									Interior Design
@@ -296,9 +283,9 @@ const Projects = () => {
 											return (
 												<div
 													className={`project ${
-														toggled[item.categoryOne] ||
-														toggled[item.categoryTwo] ||
-														!Object.values(toggled).some((val) => val)
+														toggled === item.categoryOne ||
+														toggled === item.categoryTwo ||
+														!toggled
 															? ""
 															: "hidden"
 													} ${isAnyCategoryToggled ? "toggled-span" : ""}`}

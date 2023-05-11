@@ -79,6 +79,36 @@
 	visibility: visible;
 }
 
+.category-component-container:nth-child(3) {
+	h2 {
+		max-width: 90%;
+
+		@media (max-width: 1300px) {
+			max-width: 100%;
+		}
+	}
+}
+
+.category-component-container:nth-child(4) {
+	h2 {
+		max-width: 85%;
+
+		@media (max-width: 1300px) {
+			max-width: 100%;
+		}
+	}
+}
+
+.category-component-container:nth-child(7) {
+	h2 {
+		max-width: 85%;
+
+		@media (max-width: 1300px) {
+			max-width: 100%;
+		}
+	}
+}
+
 /* The last container override */
 
 .category-component-container:last-child {

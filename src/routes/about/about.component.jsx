@@ -19,7 +19,7 @@ const members = [
 				well versed in a variety of design styles that I can apply to projects
 				from renovations to new construction. I know that no single design
 				approach is the right one for every client. That is why I allow the
-				building program and context direct design decisions.
+				building program and context to direct design decisions.
 			</Bio>,
 			<Bio key={2}>
 				A life-long resident of Richmond County, I am a Ramblin’ Wreck through
@@ -144,13 +144,13 @@ const members = [
 				for the past 8 years because I have learned so much that has allowed me
 				to further my career and given me a deeper understanding of architecture
 				and the building process. Working on a project and seeing it come to
-				life brings a deep since of pride to what I do, and I especially love
+				life brings a deep sense of pride to what I do, and I especially love
 				sharing our work with others. The drone footage you see on our website
 				is my creation (I’m an FAA certified drone operator) and gives me and
 				others a real sense of the great designs our firm produces.
 			</Bio>,
 			<Bio key={2}>
-				My interests outside of work includes salsa dancing, anything outdoors,
+				My interests outside of work include salsa dancing, anything outdoors,
 				and spending time with my children. As said by H. Jackson Brown, Jr.,
 				the best preparation for tomorrow is doing your best today.
 			</Bio>,
@@ -205,7 +205,7 @@ const members = [
 	},
 ];
 
-const videoSrc = "https://i.imgur.com/bWGuz3C.mp4#t=17";
+//const videoSrc = "https://i.imgur.com/bWGuz3C.mp4#t=17";
 
 const About = () => {
 	const transitionStyles = usePageTransition(300);
@@ -266,10 +266,27 @@ const About = () => {
 					</div>
 					<div className="video">
 						<div className="video-container">
-							<video controls>
+							<iframe
+								src="https://player.vimeo.com/video/818375642?h=f23a75542f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+								frameborder="0"
+								allow="autoplay; fullscreen;"
+								allowfullscreen
+								style={{
+									position: "absolute",
+									top: 0,
+									left: 0,
+									width: "100%",
+									height: "100%",
+									borderRadius: "15px",
+								}}
+								title="Dickinson Architects"
+							></iframe>
+
+							<script src="https://player.vimeo.com/api/player.js"></script>
+							{/* <video controls>
 								<source src={videoSrc} type="video/mp4" preload="metadata" />
 								Your browser does not support the video tag.
-							</video>
+							</video> */}
 						</div>
 					</div>
 				</section>

@@ -131,6 +131,11 @@
 					max-height: 600px;
 					overflow: scroll;
 					scrollbar-width: none;
+
+					&::-webkit-scrollbar {
+						width: 0;
+						height: 0;
+					}
 					border-radius: $br;
 
 					@media (max-width: 768px) {
