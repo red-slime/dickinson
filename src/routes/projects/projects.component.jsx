@@ -68,7 +68,7 @@ const imageContexts = {
 const Projects = () => {
 	const transitionStyles = usePageTransition(300);
 
-	const [displayedProjectsCount, setDisplayedProjectsCount] = useState(0);
+	const [displayedProjectsCount, setDisplayedProjectsCount] = useState(11);
 	const loadMoreProjects = () => {
 		setDisplayedProjectsCount(displayedProjectsCount + 11);
 	};
