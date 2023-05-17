@@ -15,6 +15,8 @@ import AngleLeft from "../../assets/icons/angle-left-light.svg";
 import AngleRight from "../../assets/icons/angle-right-light.svg";
 import ArrowLeft from "../../assets/icons/arrow-left-light.svg";
 import ArrowRight from "../../assets/icons/arrow-right-light.svg";
+import Meta from "../../components/Meta/meta.js";
+//import OgImage from "../../assets/projects/commercial/SRP/SRP (3).jpg";
 import "./project-viewer.styles.scss";
 
 const allProjects = Paths.flatMap(
@@ -254,6 +256,16 @@ const ProjectViewer = () => {
 
 	return (
 		<div className="project-viewer-container">
+			<Meta
+				/* Generic Tags */
+				title={`Dickinson Architects | ${project.name}`}
+				description={project.description}
+				keywords="dickinson, architects, augusta, ga, south carolina, projects, commercial, education, government, healthcare, historic, preservation, hospitality, interior, design"
+				/* Open Graph Tags */
+				ogTitle={project.name}
+				ogDescription={project.description}
+				ogImage={featuredSrc}
+			/>
 			<div className="project" style={transitionStyles}>
 				<div className="carousel">
 					<div

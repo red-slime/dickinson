@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef, useCallback, memo } from "react";
 import usePageTransition from "../../transition.js";
-import "./about.styles.scss";
 import x from "../../assets/icons/xmark-large-solid.svg";
+import Meta from "../../components/Meta/meta.js";
+import OgImage from "../../assets/projects/commercial/SRP/SRP (3).jpg";
+import "./about.styles.scss";
 
 const Bio = memo(({ children }) => <p className="bio-break">{children}</p>);
 
@@ -250,6 +252,16 @@ const About = () => {
 
 	return (
 		<div className="about-component-container">
+			<Meta
+				/* Generic Tags */
+				title="Dickinson Architects | About"
+				description="Better spaces. Better lives. Meet the team and learn more about the culture that drives us above expectations."
+				keywords="dickinson, architects, augusta, ga, south carolina, projects, commercial, education, government, healthcare, historic, preservation, hospitality, interior, design"
+				/* Open Graph Tags */
+				ogTitle="About Dickinson"
+				ogDescription="Meet the team and learn more about the culture that drives us above expectations."
+				ogImage={OgImage}
+			/>
 			<div className="GrayFox"></div>
 			<div className="about" style={transitionStyles}>
 				<section className="intro">

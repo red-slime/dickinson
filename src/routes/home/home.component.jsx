@@ -1,12 +1,24 @@
 import { Link } from "react-router-dom";
 import usePageTransition from "../../transition.js";
 import FeaturedList from "../../components/featured-list/featured-list.component";
+import Meta from "../../components/Meta/meta.js";
+import OgImage from "../../assets/projects/commercial/SRP/SRP (3).jpg";
 import "./home.styles.scss";
 
 const Home = () => {
 	const transitionStyles = usePageTransition(300);
 	return (
 		<div className="home-component-container">
+			<Meta
+				/* Generic Tags */
+				title="Dickinson Architects | Home"
+				description="Better Spaces. Better Lives. No matter the project type, it's a design philosophy that drives everything we do."
+				keywords="dickinson, architects, augusta, ga, south carolina, projects, commercial, education, government, healthcare, historic, preservation, hospitality, interior, design"
+				/* Open Graph Tags */
+				ogTitle="Dickinson Architects"
+				ogDescription="No matter the project type, it's design philosophy that drives everything we do."
+				ogImage={OgImage}
+			/>
 			<div className="home" style={transitionStyles}>
 				<section className="home-one">
 					<div className="mobile-splash"></div>

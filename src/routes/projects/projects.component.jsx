@@ -3,6 +3,8 @@ import Paths from "./paths.json";
 import { Link, useLocation } from "react-router-dom";
 import FilterIcon from "../../assets/icons/filter-list-regular.svg";
 import usePageTransition from "../../transition.js";
+import Meta from "../../components/Meta/meta.js";
+import OgImage from "../../assets/projects/commercial/SRP/SRP (3).jpg";
 import "./projects.styles.scss";
 
 // Remember scroll position
@@ -181,6 +183,20 @@ const Projects = () => {
 
 	return (
 		<div className="projects-component-container">
+			<Meta
+				/* Generic Tags */
+				title="Dickinson Architects | Projects"
+				description="Better spaces. Better lives. We inspire confidence from our clients
+							because we believe every space should first and foremost serve
+							those who occupy it."
+				keywords="dickinson, architects, augusta, ga, south carolina, projects, commercial, education, government, healthcare, historic, preservation, hospitality, interior, design"
+				/* Open Graph Tags */
+				ogTitle="Dickinson's Projects"
+				ogDescription="We inspire confidence from our clients
+							because we believe every space should first and foremost serve
+							those who occupy it."
+				ogImage={OgImage}
+			/>
 			<div className="work" style={transitionStyles}>
 				<section className="intro">
 					<div className="text">
