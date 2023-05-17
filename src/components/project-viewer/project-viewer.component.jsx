@@ -5,7 +5,7 @@ import React, {
 	useCallback,
 	useMemo,
 } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useLocation } from "react-router-dom";
 import { useSwipeable } from "react-swipeable";
 import usePageTransition from "../../transition.js";
 import Paths from "../../routes/projects/paths.json";
@@ -16,6 +16,11 @@ import AngleRight from "../../assets/icons/angle-right-light.svg";
 import ArrowLeft from "../../assets/icons/arrow-left-light.svg";
 import ArrowRight from "../../assets/icons/arrow-right-light.svg";
 import "./project-viewer.styles.scss";
+
+const allProjects = Paths.flatMap(
+	(category) => Object.values(category).flat()
+	//.sort((a, b) => new Date(b.completionDate) - new Date(a.completionDate))
+);
 
 const imageContexts = {
 	commercial: require.context(
@@ -67,12 +72,6 @@ const loadImages = (directory) => {
 	return images;
 };
 
-const allProjects = Paths.flatMap((category) =>
-	Object.values(category)
-		.flat()
-		.sort((a, b) => new Date(b.completionDate) - new Date(a.completionDate))
-);
-
 const Image = React.memo(({ src, alt, isActive, onClick }) => (
 	<img
 		src={src}
@@ -89,16 +88,29 @@ const ProjectViewer = () => {
 	const transitionStyles = usePageTransition(300);
 	const [featuredClass, setFeaturedClass] = useState("fade-in-right");
 
+	const location = useLocation();
+	const isAnyCategoryToggled = location?.state?.isAnyCategoryToggled;
+
+	const sortedProjects = useMemo(() => {
+		if (isAnyCategoryToggled) {
+			return [...allProjects].sort(
+				(a, b) => new Date(b.completionDate) - new Date(a.completionDate)
+			);
+		} else {
+			return [...allProjects]; // Creates a new array identical to allProjects without sorting
+		}
+	}, [isAnyCategoryToggled]);
+
 	const { directory } = useParams();
-	const project = allProjects.find(
+	const project = sortedProjects.find(
 		(project) => project.directory === directory
 	);
 
 	const nextProject = useMemo(() => {
-		const currentIndex = allProjects.findIndex(
+		const currentIndex = sortedProjects.findIndex(
 			(project) => project.directory === directory
 		);
-		return allProjects[(currentIndex + 1) % allProjects.length];
+		return sortedProjects[(currentIndex + 1) % sortedProjects.length];
 	}, [directory]);
 
 	const images = useMemo(
@@ -109,6 +121,34 @@ const ProjectViewer = () => {
 	const [activeImg, setActiveImg] = useState(0);
 	const [featuredSrc, setFeaturedSrc] = useState(images[0]);
 	const collectionScroll = useRef(null);
+
+	const [timeoutId, setTimeoutId] = useState(null);
+
+	// Clear the timeout whenever the component unmounts or when the featuredSrc, activeImg change
+	useEffect(() => {
+		return () => {
+			if (timeoutId) {
+				clearTimeout(timeoutId);
+			}
+		};
+	}, [featuredSrc, activeImg]);
+
+	// Inside the callback function
+	const handleSetActiveImage = useCallback(
+		(imageSrc, index) => () => {
+			setActiveImg(index);
+			setFeaturedClass("fade-out-right");
+
+			// Start the timeout and save the id in state
+			const id = setTimeout(() => {
+				setFeaturedSrc(imageSrc);
+				setFeaturedClass("fade-in-right");
+			}, 200);
+
+			setTimeoutId(id);
+		},
+		[]
+	);
 
 	const handleUp = () => {
 		if (window.innerWidth <= 768) {
@@ -187,17 +227,17 @@ const ProjectViewer = () => {
 		() => handleImageChange(-1),
 		[handleImageChange]
 	);
-	const handleSetActiveImage = useCallback(
-		(imageSrc, index) => () => {
-			setActiveImg(index);
-			setFeaturedClass("fade-out-right");
-			setTimeout(() => {
-				setFeaturedSrc(imageSrc);
-				setFeaturedClass("fade-in-right");
-			}, 200);
-		},
-		[]
-	);
+	// const handleSetActiveImage = useCallback(
+	// 	(imageSrc, index) => () => {
+	// 		setActiveImg(index);
+	// 		setFeaturedClass("fade-out-right");
+	// 		setTimeout(() => {
+	// 			setFeaturedSrc(imageSrc);
+	// 			setFeaturedClass("fade-in-right");
+	// 		}, 200);
+	// 	},
+	// 	[]
+	// );
 
 	const nextProjectDirectory = useMemo(
 		() => nextProject.directory,
@@ -254,7 +294,7 @@ const ProjectViewer = () => {
 						<div className="collection" ref={collectionScroll}>
 							{images.map((imageSrc, index) => (
 								<Image
-									key={index}
+									key={imageSrc}
 									src={imageSrc}
 									alt={`${project.name} - ${index}`}
 									isActive={activeImg === index}

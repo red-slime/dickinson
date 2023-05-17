@@ -294,7 +294,10 @@ const Projects = () => {
 													<Link
 														to={{
 															pathname: "/projects/" + item.directory,
-															state: { projects: items },
+															state: {
+																projects: items,
+																isAnyCategoryToggled: isAnyCategoryToggled,
+															},
 														}}
 														key={item.id}
 													>
