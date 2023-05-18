@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dickinson/static/css/main.94635bec.css",
-    "main.js": "/dickinson/static/js/main.ee00deca.js",
+    "main.js": "/dickinson/static/js/main.1b65f677.js",
     "static/js/787.4005e721.chunk.js": "/dickinson/static/js/787.4005e721.chunk.js",
     "static/media/Savannah-Rapids (2).jpg": "/dickinson/static/media/Savannah-Rapids (2).daf9e975192bd02429c6.jpg",
     "static/media/5th-Street-Bridge (9).jpg": "/dickinson/static/media/5th-Street-Bridge (9).3ccd7628b4181085779f.jpg",
@@ -69,6 +69,7 @@
     "static/media/Augusta-University (2).jpg": "/dickinson/static/media/Augusta-University (2).f3e15caa7df8c5e8afbb.jpg",
     "static/media/Beehive-Loop (4).jpg": "/dickinson/static/media/Beehive-Loop (4).7b60d19bde2bfa99cdd0.jpg",
     "static/media/Heritage-Early-Learning (5).jpg": "/dickinson/static/media/Heritage-Early-Learning (5).266cc6de35dd7e8324bc.jpg",
+    "static/media/Christ-Community (1).jpg": "/dickinson/static/media/Christ-Community (1).7f0ca867aa3c332500f3.jpg",
     "static/media/Farmhaus (1).jpg": "/dickinson/static/media/Farmhaus (1).84953b1a6e1c668305bb.jpg",
     "static/media/Sage-Valley-Lockers (5).jpg": "/dickinson/static/media/Sage-Valley-Lockers (5).bcc7021007b52329ecac.jpg",
     "static/media/Augusta-University (13).jpg": "/dickinson/static/media/Augusta-University (13).f8604faa9a694900a986.jpg",
@@ -170,7 +171,7 @@
     "static/media/Hyatt-House (2).jpg": "/dickinson/static/media/Hyatt-House (2).8c8b348070b5c7262fd6.jpg",
     "static/media/Goat Kick Coffee Co (2).jpg": "/dickinson/static/media/Goat Kick Coffee Co (2).9c156258eae8dd782f72.jpg",
     "static/media/Brinkleys Chop House (4).jpg": "/dickinson/static/media/Brinkleys Chop House (4).5d678658291f1a1605b3.jpg",
-    "static/media/Christ-Community (1).jpg": "/dickinson/static/media/Christ-Community (1).d3c24911792a1edfae0c.jpg",
+    "static/media/Christ-Community (2).jpg": "/dickinson/static/media/Christ-Community (2).d3c24911792a1edfae0c.jpg",
     "static/media/Ronald-McDonald-House (4).jpg": "/dickinson/static/media/Ronald-McDonald-House (4).ffbda7c2aac7339be521.jpg",
     "static/media/Wilkes (2).jpg": "/dickinson/static/media/Wilkes (2).fe383da722fa2cc8c4cc.jpg",
     "static/media/Marriot-Hotel (3).jpg": "/dickinson/static/media/Marriot-Hotel (3).a92a7e6e11701a2937f0.jpg",
@@ -206,7 +207,6 @@
     "static/media/Summer-House-Realty (3).jpg": "/dickinson/static/media/Summer-House-Realty (3).df1ba1d0e38e7426c3b0.jpg",
     "static/media/Wilkes (6).jpg": "/dickinson/static/media/Wilkes (6).c6ce7805a3e9c2c8df0f.jpg",
     "static/media/Goodwill (1).jpg": "/dickinson/static/media/Goodwill (1).ea5ce1ad9f8f66adb100.jpg",
-    "static/media/Christ-Community (2).jpg": "/dickinson/static/media/Christ-Community (2).9bfdb8e36ca1138977e0.jpg",
     "static/media/Augusta-Tech (4).jpg": "/dickinson/static/media/Augusta-Tech (4).5197013fb608f6ea4530.jpg",
     "static/media/Savannah-Rapids (1).jpg": "/dickinson/static/media/Savannah-Rapids (1).0909794bb65969fed21d.jpg",
     "static/media/Goodwill (2).jpg": "/dickinson/static/media/Goodwill (2).8ba942c1d8b57f5c436d.jpg",
@@ -357,11 +357,11 @@
     "static/media/angle-up-light.svg": "/dickinson/static/media/angle-up-light.c4f34d87468ac819292753cbcf155239.svg",
     "static/media/angle-left-light.svg": "/dickinson/static/media/angle-left-light.fe41386f9ce3dc108d1c6ad3fa272d1a.svg",
     "main.94635bec.css.map": "/dickinson/static/css/main.94635bec.css.map",
-    "main.ee00deca.js.map": "/dickinson/static/js/main.ee00deca.js.map",
+    "main.1b65f677.js.map": "/dickinson/static/js/main.1b65f677.js.map",
     "787.4005e721.chunk.js.map": "/dickinson/static/js/787.4005e721.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.94635bec.css",
-    "static/js/main.ee00deca.js"
+    "static/js/main.1b65f677.js"
   ]
 }
