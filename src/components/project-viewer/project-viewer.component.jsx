@@ -19,11 +19,6 @@ import Meta from "../../components/Meta/meta.js";
 //import OgImage from "../../assets/projects/commercial/SRP/SRP (3).jpg";
 import "./project-viewer.styles.scss";
 
-const allProjects = Paths.flatMap(
-	(category) => Object.values(category).flat()
-	//.sort((a, b) => new Date(b.completionDate) - new Date(a.completionDate))
-);
-
 const imageContexts = {
 	commercial: require.context(
 		"../../assets/projects/commercial",
@@ -83,6 +78,22 @@ const Image = React.memo(({ src, alt, isActive, onClick }) => (
 	/>
 ));
 
+const allProjects = Paths.flatMap((category) => Object.values(category).flat());
+
+const sortedDate = allProjects.sort(
+	(a, b) => new Date(b.completionDate) - new Date(a.completionDate)
+);
+
+const sortedAlpha = allProjects.sort((a, b) => {
+	if (a.categoryOne < b.categoryOne) {
+		return -1;
+	}
+	if (a.categoryOne > b.categoryOne) {
+		return 1;
+	}
+	return 0;
+});
+
 const calculateNextIndex = (currentIndex, delta, length) =>
 	(currentIndex + delta + length) % length;
 
@@ -95,11 +106,9 @@ const ProjectViewer = () => {
 
 	const sortedProjects = useMemo(() => {
 		if (isAnyCategoryToggled) {
-			return [...allProjects].sort(
-				(a, b) => new Date(b.completionDate) - new Date(a.completionDate)
-			);
+			return sortedAlpha;
 		} else {
-			return [...allProjects]; // Creates a new array identical to allProjects without sorting
+			return sortedDate;
 		}
 	}, [isAnyCategoryToggled]);
 
