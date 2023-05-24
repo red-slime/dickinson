@@ -16,7 +16,6 @@ import AngleRight from "../../assets/icons/angle-right-light.svg";
 import ArrowLeft from "../../assets/icons/arrow-left-light.svg";
 import ArrowRight from "../../assets/icons/arrow-right-light.svg";
 import Meta from "../../components/Meta/meta.js";
-//import OgImage from "../../assets/projects/commercial/SRP/SRP (3).jpg";
 import "./project-viewer.styles.scss";
 
 const imageContexts = {

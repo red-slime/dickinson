@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import FilterIcon from "../../assets/icons/filter-list-regular.svg";
 import usePageTransition from "../../transition.js";
 import Meta from "../../components/Meta/meta.js";
-import OgImage from "../../assets/projects/commercial/SRP/SRP (3).jpg";
+import OgImage from "../../assets/projects/commercial/SRP/SRP (1).jpg";
 import "./projects.styles.scss";
 
 // Remember scroll position

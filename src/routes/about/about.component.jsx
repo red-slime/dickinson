@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useCallback, memo } from "react";
 import usePageTransition from "../../transition.js";
 import x from "../../assets/icons/xmark-large-solid.svg";
 import Meta from "../../components/Meta/meta.js";
-import OgImage from "../../assets/projects/commercial/SRP/SRP (3).jpg";
+import OgImage from "../../assets/projects/commercial/SRP/SRP (1).jpg";
 import "./about.styles.scss";
 
 const Bio = memo(({ children }) => <p className="bio-break">{children}</p>);

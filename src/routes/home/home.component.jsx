@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import usePageTransition from "../../transition.js";
 import FeaturedList from "../../components/featured-list/featured-list.component";
 import Meta from "../../components/Meta/meta.js";
-import OgImage from "../../assets/projects/commercial/SRP/SRP (3).jpg";
+import OgImage from "../../assets/projects/commercial/SRP/SRP (1).jpg";
 import "./home.styles.scss";
 
 const Home = () => {
