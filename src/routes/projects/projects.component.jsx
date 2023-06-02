@@ -293,9 +293,11 @@ const Projects = () => {
 										totalProjectsCount++;
 
 										if (projectCount <= displayedProjectsCount) {
-											const imageSrc = imageContexts[key](
-												"./" + item.featuredImg
-											);
+											const imageSrc =
+												toggled === "InteriorDesign" && item.featuredImgInterior
+													? imageContexts[key]("./" + item.featuredImgInterior)
+													: imageContexts[key]("./" + item.featuredImg);
+
 											return (
 												<div
 													className={`project ${
