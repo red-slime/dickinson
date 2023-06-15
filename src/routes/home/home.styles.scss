@@ -289,7 +289,7 @@
 				//transform: translateY(1%);
 				background: $yellow;
 				z-index: 0;
-				border-radius: 0% 50% 0% 0%;
+				border-radius: 0% 50% 13% 0%;
 				//-webkit-animation: homeMove 25s infinite alternate;
 				//animation: homeMove 25s infinite alternate;
 				transition: 0.4s ease-in-out;
@@ -304,8 +304,8 @@
 			}
 
 			.splash:hover::before {
-				border-radius: 0% 50% 60% 0%;
-				animation: homeMove 2s infinite alternate;
+				border-radius: 0% 13% 50% 0%;
+				// animation: homeMove 2s infinite alternate;
 			}
 
 			// @keyframes homeMove {

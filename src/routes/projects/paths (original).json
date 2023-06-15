@@ -470,7 +470,7 @@
 			{
 				"id": 3,
 				"name": "East Central Regional Hospital",
-				"featuredImg": "East-Central/East-Central-Regional-Hospital (11).jpg",
+				"featuredImg": "East-Central/East-Central-Regional-Hospital (1).jpg",
 				"featuredImgInterior": "East-Central/East-Central-Regional-Hospital (5).jpg",
 				"directory": "East-Central",
 				"completionDate": "2020",
@@ -511,21 +511,6 @@
 				"categoryStringOne": "Healthcare",
 				"categoryStringTwo": "Interior Design",
 				"featured": false
-			},
-			{
-				"id": 6,
-				"name": "Doctors Hospital",
-				"featuredImg": "Doctors Hospital/Doctors Hospital (1).jpg",
-				"featuredImgInterior": "",
-				"directory": "Doctors Hospital",
-				"completionDate": "2023",
-				"squareFootage": "",
-				"description": "Dickinson Architects has had a long-standing relationship with Doctors Hospital and has assisted them with interior renovation projects in several areas of the facility, including the Burn ICU, the Emergency Department, Labor & Delivery, and a CT room. For each of these projects, the goals included modernizing the spaces and updating the design so that the spaces function more efficiently for both staff and patients.",
-				"categoryOne": "Healthcare",
-				"categoryTwo": "",
-				"categoryStringOne": "Healthcare",
-				"categoryStringTwo": "",
-				"featured": false
 			}
 		],
 		"historicPreservation": [
@@ -537,6 +522,20 @@
 				"completionDate": "2011",
 				"squareFootage": "7,574",
 				"description": "The Crawford Depot rehabilitation was funded by the Georgia Department of Transportation’s Transportation Enhancement (TE) Grant program. The project spanned multiple phases, which included general building envelope improvements, new finishes, improved accessibility through exterior ramps, and assembly spaces. In 2016, the Crawford Depot project received the Georgia Historic Trust’s Excellence in Rehabilitation Award.",
+				"categoryOne": "HistoricPreservation",
+				"categoryTwo": "",
+				"categoryStringOne": "Historic Preservation",
+				"categoryStringTwo": "",
+				"featured": ""
+			},
+			{
+				"id": 2,
+				"name": "Historic Facades",
+				"featuredImg": "Historic Facades/1325 Greene.jpg",
+				"directory": "Historic Facades",
+				"completionDate": "2000",
+				"squareFootage": "",
+				"description": "For 15 years, Dickinson Architects was the prime consultant for Augusta-Richmond County Housing and Community Development’s façade restoration program, funded by a Community Development Block Grant. Dickinson Architects gained invaluable experience and has become well-versed in the unique complexities of historic renovation projects through its work on this program.",
 				"categoryOne": "HistoricPreservation",
 				"categoryTwo": "",
 				"categoryStringOne": "Historic Preservation",
@@ -672,9 +671,9 @@
 				"squareFootage": "25,000",
 				"description": "The Savannah Rapids Pavilion is situated on the banks of the Savannah River and adjacent to the Augusta Canal, and the design provided by Dickinson Architects molds the structure into the surrounding hillside. Two large skylights bask the exposed-beam interior in light and are highlighted at night by indirect lighting. An observation deck overlooking the water adds to the resort-like atmosphere of the building, which features two banquet halls, a full kitchen, administrative offices, three meeting rooms, a dedication monument, and energy conservation features.",
 				"categoryOne": "Hospitality",
-				"categoryTwo": "",
+				"categoryTwo": "InteriorDesign",
 				"categoryStringOne": "Hospitality",
-				"categoryStringTwo": "",
+				"categoryStringTwo": "Interior Design",
 				"featured": ""
 			}
 		]
