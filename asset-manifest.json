@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dickinson/static/css/main.7d5badbb.css",
-    "main.js": "/dickinson/static/js/main.7195eec8.js",
+    "main.js": "/dickinson/static/js/main.590546ad.js",
     "static/js/787.4005e721.chunk.js": "/dickinson/static/js/787.4005e721.chunk.js",
     "static/media/Savannah-Rapids (2).jpg": "/dickinson/static/media/Savannah-Rapids (2).daf9e975192bd02429c6.jpg",
     "static/media/5th-Street-Bridge (9).jpg": "/dickinson/static/media/5th-Street-Bridge (9).3ccd7628b4181085779f.jpg",
@@ -358,11 +358,11 @@
     "static/media/angle-up-light.svg": "/dickinson/static/media/angle-up-light.c4f34d87468ac819292753cbcf155239.svg",
     "static/media/angle-left-light.svg": "/dickinson/static/media/angle-left-light.fe41386f9ce3dc108d1c6ad3fa272d1a.svg",
     "main.7d5badbb.css.map": "/dickinson/static/css/main.7d5badbb.css.map",
-    "main.7195eec8.js.map": "/dickinson/static/js/main.7195eec8.js.map",
+    "main.590546ad.js.map": "/dickinson/static/js/main.590546ad.js.map",
     "787.4005e721.chunk.js.map": "/dickinson/static/js/787.4005e721.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7d5badbb.css",
-    "static/js/main.7195eec8.js"
+    "static/js/main.590546ad.js"
   ]
 }
