@@ -16,7 +16,7 @@ import About from "./routes/about/about.component";
 import NoPage from "./components/404/404.component";
 
 Bugsnag.start({
-	apiKey: "7f8bd335d48c61af9d795ce59d97fcab",
+	apiKey: process.env.REACT_APP_BUGSNAG_API_KEY,
 	plugins: [new BugsnagPluginReact()],
 });
 
