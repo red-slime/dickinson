@@ -9,6 +9,8 @@ import InstagramSVG from "../../assets/icons/instagram.svg";
 import "./header.styles.scss";
 
 const Header = () => {
+	Bugsnag.notify(new Error("Test error"));
+
 	const location = useLocation();
 
 	const getLink = (path) => {
