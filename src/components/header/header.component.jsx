@@ -7,6 +7,8 @@ import Exit from "../../assets/icons/xmark-large-solid.svg";
 import FacebookSVG from "../../assets/icons/facebook.svg";
 import InstagramSVG from "../../assets/icons/instagram.svg";
 import "./header.styles.scss";
+import Bugsnag from "@bugsnag/js";
+import BugsnagPluginReact from "@bugsnag/plugin-react";
 
 const Header = () => {
 	Bugsnag.notify(new Error("Test error"));
