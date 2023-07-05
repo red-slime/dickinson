@@ -7,13 +7,8 @@ import Exit from "../../assets/icons/xmark-large-solid.svg";
 import FacebookSVG from "../../assets/icons/facebook.svg";
 import InstagramSVG from "../../assets/icons/instagram.svg";
 import "./header.styles.scss";
-import Bugsnag from "@bugsnag/js";
 
 const Header = () => {
-	useEffect(() => {
-		Bugsnag.notify(new Error("Test error"));
-	}, []);
-
 	const location = useLocation();
 
 	const getLink = (path) => {

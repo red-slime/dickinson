@@ -1,14 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import Bugsnag from "@bugsnag/js";
+import BugsnagPluginReact from "@bugsnag/plugin-react";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+Bugsnag.start({
+	apiKey: process.env.REACT_APP_BUGSNAG_API_KEY,
+	plugins: [new BugsnagPluginReact()],
+});
+
+const ErrorBoundary = Bugsnag.getPlugin("react").createErrorBoundary(React);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+	//<React.StrictMode>
+	<ErrorBoundary>
+		<App />
+	</ErrorBoundary>
+	//</React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
