@@ -12,7 +12,6 @@ import Home from "./routes/home/home.component";
 import Projects from "./routes/projects/projects.component";
 import About from "./routes/about/about.component";
 import NoPage from "./components/404/404.component";
-//import Analytics from "./components/analytics/analytics.component";
 
 const App = () => {
 	return (
